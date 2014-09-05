@@ -1,0 +1,178 @@
+\documentclass[12pt,a4paper]{report}
+
+%%% User pakcages
+\usepackage{wrapfig}
+\usepackage{afterpage}
+\usepackage{parskip} % Disable US-type paragraph
+\usepackage[hyphens]{url}
+\usepackage{titlesec}
+\usepackage{xfrac}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{lastpage}
+\usepackage{tocloft}
+\usepackage{float}
+\usepackage{fancybox, graphicx}
+
+%%% Tag specific
+%\usepackage{tabularx} % Table
+\usepackage{booktabs} % Nice tabelsMost critical path with backtracing
+\usepackage{fancyhdr} % header & footer
+
+%%% Layout related
+\usepackage[left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry} % Page margin
+
+%%% Reference related
+\usepackage{cleveref}
+\usepackage[backend=bibtex]{biblatex}
+
+%%% TOC
+\setcounter{tocdepth}{1}
+
+\bibliography{Kilder/kilder.bib}
+%\PassOptionsToPackage{hyphens}{url}
+
+%%% Font related
+\usepackage{kmath,kerkis}
+\usepackage{microtype}
+\usepackage{mathptmx}
+\usepackage[T1]{fontenc} 
+\usepackage[utf8]{inputenc} %%\usepackage[utf8x]{inputenc}
+\usepackage{amsfonts} % Math 
+\usepackage[font=scriptsize]{caption} %small caption text
+
+%%% Codeinput related
+\usepackage[ruled]{algorithm2e}
+\usepackage{listings} % Så man kan indsætte pæn kode, spørg Anders for hjælp
+\usepackage{color}
+\input{listensDOC.tex} % Dokument der tilader at bruge C# farvestil i kode indsættelse
+\lstset{language=[Sharp]C} 
+\lstdefinestyle{csharp2}{language=[Sharp]C, frame=lr, rulecolor=\color{blue!80!black}}
+
+\makeatletter
+\renewcommand\part{%
+    \if@openright
+        \cleardoublepage
+    \else
+        \clearpage
+    \fi
+    \thispagestyle{empty}%
+    \if@twocolumn
+        \onecolumn
+        \@tempswatrue
+    \else
+        \@tempswafalse
+    \fi
+    \null\vfil
+    \secdef\@part\@spart}
+\makeatother
+
+\AtBeginDocument{\addtocontents{toc}{\protect\thispagestyle{empty}}} 
+
+\titleformat{\chapter}{\normalfont\huge\bfseries}{ \thechapter.}{20pt}{\huge}
+\setcounter{section}{0}
+\pagestyle{fancy}
+\fancypagestyle{arabic}
+{
+    \fancyhf{}
+    \setlength{\headheight}{15pt}
+}
+
+%\titleformat{\chapter}[display]   
+%{\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}   
+\titlespacing*{\chapter}{-10pt}{-20pt}{10pt}
+
+\renewcommand{\chaptermark}[1]{ \markboth{#1}{} }
+\fancypagestyle{chp}{
+  \fancyhf{}
+    \lhead{\MakeUppercase{\leftmark}}
+  \rhead{\rightmark}%\colorbox{black}{\color{white}{\rightmark}}}
+  \cfoot{\thepage\ of \pageref{LastPage}}
+}
+\fancypagestyle{plain}{
+    %\fancyhf{}
+  \cfoot{\thepage\ of \pageref{LastPage}}
+}
+
+\newcommand*{\blankpage}{%
+\vspace*{\fill}
+\centering \textit{This page intentionally left (almost) blank.}
+\vspace{\fill}}
+
+\pagestyle{fancy}
+
+\title{
+    \vspace*{-3cm}
+    \fontsize{50}{48} \textbf{Titel TBA}\\
+    \fontsize{20}{48}\emph{A software analysis and -implementation}
+}
+\author{
+    \noindent\makebox[\textwidth]{%
+    \includegraphics[width=1.2\textwidth]{Grafik/ForsideUmodificeret.png}\hspace*{0.5cm}}\\
+    \emph{Mathias Vestergaard Rasmussen}\\
+    \emph{Christoffer Carlé Christensen}\\
+    \emph{Kasper Østergaard Helsted}\\
+    \emph{Anders Lykke Matthiassen}\\
+    \emph{Christian Stephansen}\\
+    \emph{Gideon Blegmand}
+}
+
+\date{19 - 12 - 2014}
+
+
+\definecolor{codecomment}{HTML}{383838}
+
+\lstset{language=C,
+    basicstyle=\ttfamily\scriptsize,
+    keywordstyle=\color{Blue}\ttfamily,
+    otherkeywords={WIDTH},
+    keywords=[2]{__shared__},
+    keywordstyle=[2]\color{orange}\ttfamily,
+    stringstyle=\color{red}\ttfamily,
+    commentstyle=\color{codecomment}\ttfamily,
+    breaklines=true,
+    numbers=left,
+}
+
+\usepackage[bookmarks]{hyperref}
+\hypersetup{pdftex, hidelinks=true}
+\usepackage{hypcap}
+
+\begin{document}
+    \addtocontents{toc}{\protect\thispagestyle{empty}}
+    \maketitle
+    \afterpage{\blankpage}
+        \thispagestyle{empty}
+    %\pagenumbering{gobble}
+    \clearpage
+    %Titlepage 
+    \input{Titlepage/titelblad}
+    \afterpage{\blankpage}
+        \thispagestyle{empty}
+    %\pagenumbering{gobble}
+    \clearpage
+    %\pagenumbering{roman}
+    \input{Indledning/Forord}
+        \thispagestyle{empty}
+    %\renewcommand*\contentsname{Indholdsfortegnelse}
+    \newpage
+        {\pagestyle{empty}
+    \tableofcontents
+    \cleardoublepage}
+    \pagenumbering{arabic}
+    \clearpage
+    \setcounter{page}{1}
+
+        %descripiton of tasks mangeler
+        %the relationship between stakeholders
+                \pagestyle{plain}
+    \part{Problem Analysis}
+
+    \part{Product Development}
+
+    \part{Summary}
+
+    \part{Annexes}
+
+        \printbibliography
+
+\end{document}
