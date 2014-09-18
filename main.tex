@@ -1,6 +1,6 @@
 \documentclass[12pt,a4paper]{report}
 
-%%% User pakcages
+%%% User packages
 \usepackage{wrapfig}
 \usepackage{afterpage}
 \usepackage{parskip} % Disable US-type paragraph
@@ -12,6 +12,7 @@
 \usepackage{tocloft}
 \usepackage{float}
 \usepackage{fancybox, graphicx}
+\usepackage[footnote,draft,english,silent,nomargin]{fixme}
 
 %%% Tag specific
 %\usepackage{tabularx} % Table
@@ -166,6 +167,7 @@
         %the relationship between stakeholders
                 \pagestyle{plain}
     \part{Problem Analysis}
+    	\input{Analysis/Pact/People}
 
     \part{Product Development}
 
@@ -174,5 +176,8 @@
     \part{Annexes}
 
         \printbibliography
+        
+        % list of fxnotes that needs to be fixed
+        \listoffixmes
 
 \end{document}
