@@ -112,7 +112,7 @@
   url = {http://analysedanmark.dk/assets/files/Stop_Spild_Af_Mad_Resultater.pdf}
 }
 
-@ELECTRONIC{madSpild_Offentlige,
+@ELECTRONIC{,
   organization = {Berlingske},
   owner = {Anders},
   timestamp = {2014.09.18}
