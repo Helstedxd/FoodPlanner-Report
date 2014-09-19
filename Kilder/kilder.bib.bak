@@ -1,6 +1,19 @@
 % This file was created with JabRef 2.9.2.
 % Encoding: Cp1252
 
+@ELECTRONIC{madSpild_Emballage,
+  author = {'LM'},
+  month = {Febuary},
+  year = {2012},
+  title = {EMBALLAGE HAR STOR INDFLYDELSE PÅ MÆNGDEN AF MADSPILD},
+  language = {Danish},
+  organization = {Affald og Ressourcer},
+  note = {Butikker},
+  url = {http://www.affaldogressourcer.dk/article-2206-Emballage-har-stor-indflydelse-pa-mangden-af-madspild.html},
+  owner = {Anders},
+  timestamp = {2014.09.18}
+}
+
 @ELECTRONIC{madSpild_ForbrugereneErVaerrer,
   author = {OLIVER BÆRENTSEN},
   month = {May},
@@ -90,6 +103,30 @@
   timestamp = {2014.09.17}
 }
 
+@ELECTRONIC{madSpild_Offentlige,
+  author = {Kristian Sjøgren},
+  month = {August},
+  year = {2012},
+  title = {Det offentlige kan spare en milliard kroner på madspild},
+  language = {Danish},
+  organization = {Berlingske},
+  note = {Offentlige},
+  url = {http://www.b.dk/viden/det-offentlige-kan-spare-en-milliard-kroner-paa-madspild},
+  owner = {Anders},
+  timestamp = {2014.09.18}
+}
+
+@ELECTRONIC{madSpild_LavEnPlan,
+  author = {Fødevarestyrelsen Staff},
+  title = {Læg en plan og undgå madspild},
+  language = {Danish},
+  organization = {Fødevarestyrelsen},
+  note = {Til det private},
+  url = {http://altomkost.dk/fakta/madspild/laeg-en-plan-og-undgaa-madspild/},
+  owner = {Anders},
+  timestamp = {2014.09.18}
+}
+
 @ELECTRONIC{madspild_advice,
   author = {forbrugerbevægelsen Stop Spild Af Mad Staff},
   month = {09},
@@ -103,6 +140,32 @@
   timestamp = {2014.09.17}
 }
 
+@ELECTRONIC{,
+  author = {Aalborg Universitet},
+  month = {March},
+  year = {2013},
+  title = {Reducering af madspild og værdiskabelse på baggrund af fødevarerester},
+  language = {Danish},
+  organization = {Udannelses- og Forskningsministeriet},
+  note = {Til det private},
+  url = {http://ufm.dk/aktuelt/temaer/inno/modtagede-indspil/afsender/aalborg-universitet/reducering-af-madspild-og-vaerdiskabelse-pa-baggrund-af-fodevarerester},
+  owner = {Anders},
+  timestamp = {2014.09.19}
+}
+
+@ELECTRONIC{madSpild_KanIkkeUndgaas,
+  author = {JANE AUNSBJERG VILLADSEN},
+  month = {08},
+  year = {2012},
+  title = {Ekspert: Madspild kan ikke undgås},
+  language = {Danish},
+  organization = {Jyllands-Posten.dk},
+  note = {Offentlige},
+  url = {http://jyllands-posten.dk/indland/ECE4806903/ekspert-madspild-kan-ikke-undgas/},
+  owner = {Anders},
+  timestamp = {2014.09.18}
+}
+
 @OTHER{madSpild_Faktaboks,
   abstract = {This is the cheat sheep of an survey conducted on 1.000 participants},
   comment = {Faktaboks},
@@ -110,11 +173,5 @@
   owner = {Anders},
   timestamp = {2014.09.18},
   url = {http://analysedanmark.dk/assets/files/Stop_Spild_Af_Mad_Resultater.pdf}
-}
-
-@ELECTRONIC{,
-  organization = {Berlingske},
-  owner = {Anders},
-  timestamp = {2014.09.18}
 }
 
