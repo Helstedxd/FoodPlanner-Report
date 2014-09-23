@@ -27,16 +27,6 @@
   timestamp = {2014.09.19}
 }
 
-@ELECTRONIC{blakBerry,
-  author = {BlackBerry},
-  title = {THE NEW BLACKBERRY Q10},
-  language = {English},
-  organization = {BlackBerry},
-  url = {http://us.blackberry.com/smartphones/blackberry-q10.html?LID=us:bb:devices:blackberryq10&LPOS=us:bb:devices},
-  owner = {Anders},
-  timestamp = {2014.09.23}
-}
-
 @STANDARD{madSpild_FDB,
   title = {FORBRUGERE: VI SMIDER IKKE MAD UD!},
   organization = {FDB},
@@ -48,8 +38,7 @@
   year = {2011},
   note = {Beskrivele af madspild i det private},
   url = {https://om.coop.dk/Upload/om.coop.dk/Ansvarlighed/miljoeokologi/r_1_Rapp_MadSpild_2011.pdf},
-  abstract = {En antropologisk undersøgelse af, hvordan madspild opstår og opleves
-	af forbrugerne},
+  abstract = {En antropologisk undersøgelse af, hvordan madspild opstår og opleves af forbrugerne},
   owner = {Anders},
   timestamp = {2014.09.19}
 }
@@ -142,7 +131,8 @@
 }
 
 @STANDARD{madSpild_CONCITOAdvice,
-  title = {Det skjulte madspild Kortlægning og handlingskatalog},
+  title = {Det skjulte madspild 
+  Kortlægning og handlingskatalog},
   organization = {CONCIITO},
   institution = {CONCITO},
   author = {Michael Minter, Thomas Færgeman},
@@ -302,4 +292,3 @@
   owner = {Anders},
   timestamp = {2014.09.19}
 }
-

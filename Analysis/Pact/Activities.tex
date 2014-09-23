@@ -5,8 +5,9 @@ In the home:
 \begin{itemize}
 \item The program will be used to manage the food supply, by;
 	\begin{itemize}
-		\item Viewing a list of the stored groceries\fxnote{Dette punkt kunne også være udenfor hjemmet (har jeg allerede ddet her derhjemme?), måske der skulle være en tredje del med de punkter som ikke ndvendigvis hører til hjemme/ikke hjemme}
+		\item Viewing a list of the stored groceries
 		\item Updating the list, by adding or removing groceries that could have been used, or groceries that has gone bad
+		\item "Flushing" the stored groceries. This should be done when the program is initiated for the first time or after a long period of inactivity
 		\item Create a shopping list of the groceries needed for the planned meals
 		\item Search for recipes
 		\item Add new or modified recipes
@@ -23,11 +24,17 @@ In the home:
 		\item Be able to check if you have the kitchen tools
 		\item Associate kitchen tools with a specific recipe
 	\end{itemize}
-	\item While cooking the meal, you would want to follow a recipe while cooking, which mean you might have to interact with the program during the cooking.
+	\item While cooking the meal, you would want to follow a recipe while cooking, which mean you might have to interact with the program during the cooking
 \end{itemize}
 
 Outside the home:
 \begin{itemize}
 \item While shopping for groceries, it is necessary to keep track of the shopping list, to see what should be bought.
-\item If a new recipe is wanted while on the fly, changes to the shopping list must be done.
+\item If a new recipe is wanted while on the fly, changes to the shopping list must be done
 \end{itemize}
+
+Frequent activities such as looking for a recipe should be ue to do, but some activities such as flushing the stored groceries should be easy to learn. This could be done by having a walk trough when the users tries to do this particular activity. The program should also allow for mistakes such as going into undesired program pages. This can be helped by leaving methods for easy navigation in the program. If the user is interrupted and have to pause their usage of the program, the user should be able to continue later. This is relevant if they are making a grocery list or a new recipe. These document should have a save and edit function in order for the user to pick up on their work later.
+
+The response time could become a point of frustration for the user if they want to lookup an online recipe if the response time is more or equal to five seconds. As the recipes are available online there is a risk of an high latency between the users device and the server containing the recipes. A workaround for this would be to have a local version of the recipe database. %, and only have te device to synronise the two databases once in a while.
+
+The user is able to add or edit recipes and groceries lists, and will therefore need an method of inputting alphabetic data into the program. Since the  solution is minded to be on a handhold or mobile platform, a keyboard is not optimal as it will be frustrating to carry around. A small integrated keyboard, like the one a Blackberry has\cite{blakBerry}, would not work either as it will get dirty when used in the kitchen. If the user is baking and want to type on the keyboard it could get flour in between the buttons, which would be difficult to clean. An on screen touch display can be cleaned with a towel and an simulate a keyboard, and is therefore the best option for this solution. Voice recognition could also be a possibility, but outside noise will be too big of a nuisance. A lot of noise could interfere with the program when the user is in a mall or using kitchen tools such as a blender, or if they are boiling water.
