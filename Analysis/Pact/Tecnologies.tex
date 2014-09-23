@@ -1,52 +1,58 @@
 \section{Technologies}
-
-When doing a PACT analysis it is important to look at the technologies included in the design. This section is split up into 3 different parts; the input, the output, and the communication.
+This section will examine the technologies part of the PACT analysis. The section is divided into three subsections Input, output and communication corresponding to the three subparts of the technologies analysis. The subsections will be examining the pros and cons of different relevant technologies with a focus on tablet and smartphones related technologies.
 
 \subsection{Input}
-
-Since the product is going to be released on tablets and cell phones, all the input tecnologies are incorporated in these. No external plug-in devices are going to be used for the application. The list of input technologies are:
+The final platform will likely be tablets or smartphones and therefore therefore might not be any external plug-in devices that are going to be used for the application. This gives us the listed input technologies:
 
 \begin{itemize}
     \item Camera
-    \item Multi-touch screen
+    \item Microphone
+    \item Touchscreens (includes multi-touch)
     \item Physical buttons
 \end{itemize}
 
-The camera is used as an input technology in the sense, that it is needed to scan the barcodes of the products. When a barcode is scanned, the cell phone or tablet are supposed to recognize the product, and in that way know what product to modify in quantity, expiration date or something else.
+The camera can be used to input pictures and video or input 2D barcode. Pictures and videos can be useful when the user adds content to the program such as creating a recipe or adding a instructional videos. It is possible to get applications that scan traditional barcodes and QR codes. This can be used if there are any relevant data on the 2D barcodes that needs to be transferred to the device. This data could an items type or expiration date.           
+      
+The microphone can be used to input audio into the device. This can be useful if the users hands are occupied and they need to do some simple interaction with the program.  
 
-The multi-touch screen is used to navigate in the app. If a recipe are being viewed and the users needs to zoom in on text, using two fingers to pull the recipe bigger so it is easier readable.
+%The camera is used as an input technology in the sense, that it is needed to scan the barcodes of the products. When a barcode is scanned, the cell phone or tablet are supposed to recognize the product, and in that way know what product to modify in quantity, expiration date or something else.
 
-The physical buttons are also used to navigate throughout the program. Though the buttuns will mostly only be to view the setting, or exit the program quickly, the buttuns for modifiying the sound level of the app, is also used, when viewing a video in the application.
+The touchscreen technology is easy to use and widely used in tablets and smartphones\fxnote{kan der skrive at alle har og skal der kilde?}. Users can press on the screen with their finger to interact with the program. This is convenient because a user always has their fingers with them. Touchscreen also enables the use of multi-touch technology. This enables more than one finger to be used when interacting with the touchscreen. Multi-touch uses zooming (pinching) and rotating of pictures and text. This is useful in the general use of the program.       
+
+%The multi-touch screen is used to navigate in the app. This function enables the user to make a pinch gesture on the screen and zoom in or out making it easier to view content. 
+
+The physical buttons are used to navigate throughout the program and standard functionality e.g. volume control. Though the buttons will mostly only be to view the setting\fxnote{hvilken setting?}, or exit the program quickly, the buttons for modifying the sound level of the app, is also used, when viewing a video in the application.\fxnote{hvad bruges de knapper til og hvad betyder sidste sætning?}
 
 \subsection{Output}
-
 The list of output technologies are:
 
 \begin{itemize}
     \item Screen
     \item Speakers
-    \item Vibration
+    \item vibrating alert
 \end{itemize}
 
-The creen is used for displaying the app itself. By being able to see the app, the user has a easier way of navigating than if the applications just relied purely on sound. It is also why the input technology multi-touch screen are smart, because being able to see what you navigate through makes navigation in an application easier.
+The screen is used for visual display and visual feedback. Screen technology is useful to display large amount of information to the user. The size of the screen must be taken into consideration when displaying information such as screen elements (e.g. buttons) and/or text. Devices such as a laptop screen or desktop monitor can display many elements and large quantities of text. Devices with smaller screens such as a tablet or a smartphone is limited in the amount of information they can display. Large amounts of text can require pinching and scrolling making it hard to read. Large clutters or quantities of elements can also be hard to navigate through. It can be useful for all screen sizes to use symbols to show what elements can do instead of using screen space on unnecessary elements.            
 
-Speakers are used for giving letting the user achieve an audio based experience when using the application. The speakers will be used when showing video to the user, so the user can hear what is happening in the video. It might also be used for feedback when a user does something specific in the app. If the user is downloading a first recipe, the app might display a sound of achievement to let the user know that something new has been done.
-
-The vibration is used for user feedback, when a user does something he can not like try to access a feature he can not access, a vibration will help the user understand that it can't be done at the moment. Though vibration alone does not mean much, but combines with audio or visual elements will let the user know that the feature can not be accessed.
+Speakers and/or vibrating alert can be used in conjunction with the screen to give different kinds of feedback simultaneously. Speakers and vibrating alert are especially useful to give the user feedback in situations where the screen of the device is not viewable. The speakers are helpful in situations were there are no physical contact with the device but it is still in hearing range. This could be applied in many home situations were the user might not have the device with them or they can not see the device. Vibrating alert is more useful when the user has physical contact with the device or in situations where sound might be hard to hear or is disabled. This could be useful in crowded environments such as a shopping mall.     
 
 \subsection{Communication}
 
-Communication means hwo the application are supposed to communicate with the interet and other users. The list of technologies is:
+Communication means how the application are supposed to communicate with the internet and other users. The list of technologies is:
 
 \begin{itemize}
-    \item Wi-fi
-    \item Mobile Networks
+	\item Wi-fi
+	\item Wireless telephone networks    
+    \item Database
 \end{itemize}
 
-The Wi-Fi of the tablet or cell phone are used for connecting to the internet, to be able to synchronize the changes in the program so it can be viewed on a different device. But the Wi-fi is also used for accessing databases so information about products can be accessed.
+A Wi-fi connection is a wireless connection to the internet.This is a useful technology because all tablets and smartphones has Wi-fi technology\fxnote{en kilde?}. Wi-fi can be used to access data that are stored on other devices which are not used by a user such as a server. It can also be used between devices on the same network to synchronize changes in the program.    
+%The Wi-Fi of the tablet or cell phone are used for connecting to the internet, to be able to synchronize the changes in the program so it can be viewed on a different device. But the Wi-fi is also used for accessing databases so information about products can be accessed.
 
 Mobile networks is used for the same reason as Wi-fi. Though some mobile devices does not have Mobile Networks. Some tablets are cheaper when they only provide Wi-Fi tecnology, therefore both Wi-fi and mobile networks are technologies worth considering.
 
+A database can be used to store data on and the data can be accessed via the internet. This is useful because a database can store larger amounts of data than a mobile device. 
+ 
 \subsection{Conclusion}
 
-Many different technologies are required to be considered when doing a PACT analysis, the technologies needed for the food planner application is from the 3 catagories; input, output, and communication. The technologies ranges from physical buttons, to the wi-fi element needed for the syncronization of the data.
+Many different technologies are required to be considered when doing a PACT analysis, the technologies needed for the food planner application is from the 3 catagories; input, output, and communication. The technologies ranges from physical buttons, to the wi-fi element needed for the syncronization of the data\fxnote{kan skrives når min hjerne er klar igen}.
