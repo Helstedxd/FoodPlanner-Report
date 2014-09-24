@@ -128,7 +128,7 @@
 
 @MISC{madSpild_Notat,
   author = {LLN},
-  title = {Katalog over idéer til initiativer til begrænsning af madspild},
+  title = {Katalog over ideer til initiativer til begraensning af madspild},
   month = {June},
   year = {2011},
   owner = {Anders},
@@ -179,10 +179,10 @@
 }
 
 @ELECTRONIC{madSpild_MindreMadspild,
-  author = {Miljøstyrelsen},
+  author = {Miljoestyrelsen},
   title = {Mindre madspild},
   language = {Danish},
-  organization = {Miljøstyrelsen},
+  organization = {Miljoestyrelsen},
   url = {www.brugmerespildmindre.dk/mindre-madspild},
   owner = {Anders},
   timestamp = {2014.09.23}
