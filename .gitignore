@@ -24,5 +24,6 @@
 *.lox
 *.synctex.gz
 *.xml
+*.bak
 *.db
 main-blx.bib
