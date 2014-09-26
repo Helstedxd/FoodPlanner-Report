@@ -253,6 +253,16 @@
   timestamp = {2014.09.18}
 }
 
+@ELECTRONIC{barcodeInc_FAQ,
+  author = {Barcodes Inc Staff},
+  title = {Barcoding Frequently Asked Questions (FAQ)},
+  language = {English},
+  organization = {Barcodes Inc},
+  url = {http://www.barcodesinc.com/faq/},
+  owner = {Anders},
+  timestamp = {2014.09.25}
+}
+
 @ELECTRONIC{madSpild_LavEnPlan,
   author = {Fødevarestyrelsen Staff},
   title = {Læg en plan og undgå madspild},
