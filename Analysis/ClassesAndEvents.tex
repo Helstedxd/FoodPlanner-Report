@@ -2,7 +2,7 @@
 The purpose of this chapter is to select and analyse components from the problem domain. These components is slitted into classes and events.
 
 \section{Classes}
-In this section a list of classes will be presented. the classes there is described are those which have been chosen trough class candidate analysis.
+In this section a list of classes will be presented. The classes there is described are those which have been chosen trough an class candidate analysis.
 
 \subsection{Physical}
 
@@ -16,21 +16,62 @@ In this section a list of classes will be presented. the classes there is descri
 \end{itemize}
 
 \subsection{Persons}
+\begin{itemize}
 \item User
 	\subitem This class contains information about the preferences of a specific user, and will allow the solution to synchronize/share data with other users or devices
-	
+\end{itemize}
+
 \subsection{Places}
+\begin{itemize}
 \item Shop
 	\subitem This class holds information about the location of specific groceries and sales.
+\end{itemize}
 
 \subsection{Other}
+\begin{itemize}
 \item Achievement
 	\subitem Information about point, progress and criterias %criterias er stavet rigtigt.
-
-
+\end{itemize}
 
 \section{Events}
-\subsection{consume/spend/use}
+In this section a list of events will be presented. The events there is described are those which have been chosen trough an event candidate analysis.
+\subsection{Consumption}
+\begin{itemize}
+\item Budget used
+	\subitem Trigger: The balance have been changed as products have been bought
+\item Budget refilled
+	\subitem Trigger: The user sets a new weekly/monthly balance, or reaches a new time period 
+\item Product bought
+	\subitem Trigger: An shopping list have been completed. The items bought will be added to an inventory
+\item Product removed
+	\subitem Trigger: A meal have been prepared and the product should be removed form the inventory, or have an subtraction from its original volume/quantity
+\item Product expired
+	\subitem Trigger: When a product reaches its expiration date it should be thrashed" and removed from the inventory
+\end{itemize}
+
 \subsection{Planning}
+\begin{itemize}
+\item Recipe scheduled
+	\subitem Trigger: When a recipe is tied to a date in the foodplan
+\item Recipe removed
+	\subitem Trigger: When the user removes a recipe there was tied to a date in the foodplan
+\item Shopping list item added
+	\subitem Trigger: When a recipe have been scheduled in the foodplan, the system will check for which products is needed and afterwards adds any missing products to the shopping list
+\item Shopping list created
+	\subitem Trigger: When a foodplan is completed, by which there no days without a recipe, the shopping list will be locked and i considered completed as well
+\end{itemize}
+
 \subsection{Preferences / settings}
+\begin{itemize}
+\item Preference changed
+	\subitem Trigger: When the user goes to a settings menu to ban products from the system, due to allergies, diets or preference
+\end{itemize}
+
+
 \subsection{Other}
+\begin{itemize}
+\item Achievement unlocked
+	\subitem Trigger: A user has fulfilled the requirements for a achievement  
+\item Recommended foodplan generated
+	\subitem Trigger: When the user prompts the system to create a recommendation list
+\end{itemize}
