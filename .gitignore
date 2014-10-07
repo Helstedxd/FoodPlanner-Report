@@ -20,10 +20,10 @@
 *.mtc
 *.mtc1
 *.out
-*.pdf
 *.lox
 *.synctex.gz
 *.xml
 *.bak
 *.db
+main.pdf
 main-blx.bib
