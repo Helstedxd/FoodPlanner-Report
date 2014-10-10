@@ -9,7 +9,7 @@ In this section a list of classes will be presented. The classes there is descri
 \item Product
 	\subitem This class is used to identify different food products for the recipes with information such as food type and expiration date. This class is essential for the program and will be used frequently.
 \item Recipe
-	\subitem This class holds information about the ingredients and instructions on how to cook the meal.
+	\subitem This class holds information about the food ingredients and instructions on how to cook the meal.
 \item Scheduled Meal
 	\subitem This class contains information about a recipe and when it is scheduled to be cooked.
 \end{itemize}
@@ -55,7 +55,7 @@ In this section a list of events will be presented. The events there is describe
 \item Recipe removed
 	\subitem Trigger: When the user removes a recipe there was tied to a date in the foodplan.
 \item Shopping list item added
-	\subitem Trigger: When a recipe have been scheduled in the foodplan, the system will check for which products is needed and afterwards adds any missing products to the shopping list.
+	\subitem Trigger: When a recipe have been scheduled in the foodplan, the system will check for which food ingredients is needed, and thereafter adds any missing products to the shopping list.
 \item Shopping list created
 	\subitem Trigger: When a foodplan is completed, by which there no days without a recipe, the shopping list will be locked and i considered completed as well.
 \end{itemize}
@@ -71,8 +71,8 @@ In this section a list of events will be presented. The events there is describe
 \begin{itemize}
 \item Achievement unlocked
 	\subitem Trigger: A user has fulfilled the requirements for a achievement.
-\item Recommended foodplan generated
-	\subitem Trigger: When the user prompts the system to create a recommendation list.
+%\item Recommended foodplan generated
+%	\subitem Trigger: When the user prompts the system to create a recommendation list.
 \end{itemize}
 
 \section{Event Table}
@@ -82,8 +82,8 @@ An event table have been constructed in order to get an overview of the relation
                           \vline           & Product& Recipe & User & Scheduled Meal & Shop & Achievement\\
  Consumption              \vline           &        &        &      &                &      &            \\   
  \hline    
- Budget used    		  \vline           &        &      X &      &                &      &            \\
- Budget refilled		  \vline	       &        &      X &      &                &      &            \\
+ Budget used    		  \vline           &        &        &   X  &                &      &            \\
+ Budget refilled		  \vline	       &        &        &   X  &                &      &            \\
  Product bought 		  \vline    	   &     X  &        &      &                &      &          X \\
  Product removed		  \vline    	   &     X  &        &      &                &      &            \\
  Product expired		  \vline	       &     X  &        &      &                &      &            \\
@@ -99,7 +99,7 @@ An event table have been constructed in order to get an overview of the relation
  \hline        
  Preference changed       \vline	       &        &        &   X  &                &      &            \\
  Achievement unlocked     \vline	       &        &        &      &                &      &          X \\
- Recommended foodplan generated \vline     &     X  &      X &    X &                &      &            \\
+%Recommended foodplan generated \vline     &     X  &      X &    X &                &      &            \\
  Recipe found              \vline          &        &      X &    X &              X &      &            
 \end{tabular}
 \end{table}
