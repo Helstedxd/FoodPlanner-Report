@@ -77,29 +77,36 @@ In this section a list of events will be presented. The events there is describe
 
 \section{Event Table}
 An event table have been constructed in order to get an overview of the relations between classes and events. This allows for a better judgement of which classes is relevant. See \.ref DELIMINATION for which classes have been selected for this report.
+
+\fxnote{Update event table, or remove achievement and shop (later)}
 \begin{table}[h]
 \begin{tabular}{r c c c c c c}
-                          \vline           & Product& Recipe & User & Scheduled Meal & Shop & Achievement\\
- Consumption              \vline           &        &        &      &                &      &            \\   
+                          \vline           & Product& Recipe & User & Meal & Shop & Achievement\\
+ \textbf{Consumption}     \vline           &        &        &      &      &      &            \\   
  \hline    
- Budget used    		  \vline           &        &        &   X  &                &      &            \\
- Budget refilled		  \vline	       &        &        &   X  &                &      &            \\
- Product bought 		  \vline    	   &     X  &        &      &                &      &          X \\
- Product removed		  \vline    	   &     X  &        &      &                &      &            \\
- Product expired		  \vline	       &     X  &        &      &                &      &            \\
+ Budget used    		  \vline           &        &        &   *  &      &      &            \\
+ Budget refilled		  \vline	       &        &        &   *  &      &      &            \\
+ Product added	 		  \vline    	   &     +  &        &      &      &      &            \\
+ Product removed		  \vline    	   &     +  &        &      &      &      &            \\
+ Product expired		  \vline	       &     *  &        &      &      &      &            \\
+ Product unexpired		  \vline	       &     *  &        &      &      &      &            \\
+ Product quantity changed \vline	       &     *  &        &      &      &      &            \\
+ Product expiration changed\vline	       &     *  &        &      &      &      &            \\
  \hline				
- Planning   	          \vline           &        &        &      &                &      &            \\
+ \textbf{Planning}   	  \vline           &        &        &      &      &      &            \\
  \hline 
- Shopping list item added \vline    	   &     X  &      X &      &                &    X &            \\
- Shopping list completed  \vline	       &        &        &      &              X &    X &            \\
- Recipe added			  \vline	       &        &      X &      &              X &      &            \\
- Recipe removed           \vline	       &        &      X &      &              X &      &            \\
+ Shopping list item added \vline    	   &     +  &        &      &      &      &            \\
+ Shopping list completed  \vline	       &     +  &        &      &      &      &            \\
+ Meal added			  	  \vline	       &        &      + &      &    + &      &            \\
+ Meal removed             \vline	       &        &      + &      &    + &      &            \\
+ Meal participants changed\vline	       &        &        &      &    * &      &            \\
+ Day passed				  \vline	       &        &        &      &    * &      &            \\
  \hline           
- Other                    \vline           &        &        &      &                &      &            \\ 
+ \textbf{Other}           \vline           &        &        &      &      &      &            \\ 
  \hline        
- Preference changed       \vline	       &        &        &   X  &                &      &            \\
- Achievement unlocked     \vline	       &        &        &      &                &      &          X \\
-%Recommended foodplan generated \vline     &     X  &      X &    X &                &      &            \\
- Recipe found              \vline          &        &      X &    X &              X &      &            
+ Preference changed       \vline	       &        &        &   *  &      &      &            \\
+ %Achievement unlocked     \vline	       &        &        &      &      &      &          X \\
+%Recommended foodplan generated \vline     &     X  &      X &    X &      &      &            \\
+ Recipe found              \vline          &        &      * &      &      &      &            
 \end{tabular}
 \end{table}
