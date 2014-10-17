@@ -1,5 +1,13 @@
 \documentclass[12pt,a4paper]{report}
 
+\newenvironment{tightcenter}{%
+  \setlength\topsep{0pt}
+  \setlength\parskip{0pt}
+  \begin{center}
+}{%
+  \end{center}
+}
+
 %%% User packages
 \usepackage{wrapfig}
 \usepackage{afterpage}
@@ -77,6 +85,8 @@
     \fancyhf{}
     \setlength{\headheight}{15pt}
 }
+
+
 
 %\titleformat{\chapter}[display]   
 %{\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}   
