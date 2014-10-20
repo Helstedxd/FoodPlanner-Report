@@ -50,14 +50,14 @@ In this section a list of events will be presented. The events there is describe
 
 \subsection{Planning}
 \begin{itemize}
-\item Recipe scheduled
-	\subitem Trigger: When a recipe is tied to a date in the foodplan.
-\item Recipe removed
-	\subitem Trigger: When the user removes a recipe there was tied to a date in the foodplan.
-\item Shopping list item added
-	\subitem Trigger: When a recipe have been scheduled in the foodplan, the system will check for which food ingredients is needed, and thereafter adds any missing products to the shopping list.
-\item Shopping list created
-	\subitem Trigger: When a foodplan is completed, by which there no days without a recipe, the shopping list will be locked and i considered completed as well.
+    \item Recipe scheduled
+    	\subitem Trigger: When a recipe is tied to a date in the foodplan.
+    \item Recipe removed
+    	\subitem Trigger: When the user removes a recipe there was tied to a date in the foodplan.
+    \item Shopping list item added
+    	\subitem Trigger: When a recipe have been scheduled in the foodplan, the system will check for which food ingredients is needed, and thereafter adds any missing products to the shopping list.
+    \item Shopping list created
+    	\subitem Trigger: When a foodplan is completed, by which there no days without a recipe, the shopping list will be locked and i considered completed as well.
 \end{itemize}
 
 \subsection{Preferences / settings}
@@ -78,36 +78,36 @@ In this section a list of events will be presented. The events there is describe
 \section{Event Table}
 An event table have been constructed in order to get an overview of the relations between classes and events. This allows for a better judgement of which classes is relevant. See \.ref DELIMINATION for which classes have been selected for this report.
 
+%\label{MealClass}
+
 \fxnote{Update event table, or remove achievement and shop (later)}
 \begin{table}
-\centering
-\begin{tabular}{|r| c| c| c| c| c| c|}\hline
-                                     & Product& Recipe & User & Meal \\\hline
- \textbf{Consumption}                &        &        &      &                  \\   
- \hline    
- Budget used    		             &        &        &   *  &                  \\
- Budget refilled		  	       &        &        &   *  &                  \\
- Product added	 		      	   &     +  &        &      &                  \\
- Product removed		      	   &     +  &        &      &                  \\
- Product expired		  	       &     *  &        &      &                  \\
- Product unexpired		  	       &     *  &        &      &                  \\
- Product quantity changed 	       &     *  &        &      &                  \\
- Product expiration changed 	       &     *  &        &      &                  \\
- \hline				
- \textbf{Planning}   	             &        &        &      &                  \\
- \hline 
- Shopping list item added     	   &     +  &        &      &       \\
- Shopping list completed  	       &     +  &        &      &       \\
- Meal added			  	  	       &        &      + &      &    +             \\
- Meal removed             	       &        &      + &      &    +  \\
- Meal participants changed 	       &        &        &      &    *             \\
- Day passed				  	       &        &        &      &    *             \\
- \hline           
- \textbf{Other}                      &        &        &      &                  \\ 
- \hline        
- Preference changed       	       &        &        &   *  &                  \\
- %Achievement unlocked     \vline	       &        &        &      &      &      &          X \\
-%Recommended foodplan generated \vline     &     X  &      X &    X &      &      &            \\
- Recipe found                        &        &      * &      &        \\\hline          
-\end{tabular}
+    \begin{tabular}{|r|c|c|c|c|c|c|}
+        \hline
+        ~                                      & Product & Recipe & User & Meal & ~ & ~ \\ \hline
+        \textbf{Consumption}                   & ~       & ~      & ~    & ~    & ~ & ~ \\ 
+        Budget used                            & ~       & ~      & *    & ~    & ~ & ~ \\ 
+        Budget refilled                        & ~       & ~      & *    & ~    & ~ & ~ \\ 
+        Product added                          & +       & ~      & ~    & ~    & ~ & ~ \\ 
+        Product removed                        & +       & ~      & ~    & ~    & ~ & ~ \\ 
+        Product expired                        & *       & ~      & ~    & ~    & ~ & ~ \\ 
+        Product unexpired                      & *       & ~      & ~    & ~    & ~ & ~ \\ 
+        Product quantity changed               & *       & ~      & ~    & ~    & ~ & ~ \\ 
+        Product expiration changed             & *       & ~      & ~    & ~    & ~ & ~ \\ 
+        \textbf{Planning}                      & ~       & ~      & ~    & ~    & ~ & ~ \\ 
+        Shopping list item added               & +       & ~      & ~    & ~    & ~ & ~ \\ 
+        Shopping list completed                & +       & ~      & ~    & ~    & ~ & ~ \\ 
+        Meal added                             & ~       & +      & ~    & +    & ~ & ~ \\ 
+        Meal removed                           & ~       & +      & ~    & +    & ~ & ~ \\ 
+        Meal participants changed              & ~       & ~      & ~    & *    & ~ & ~ \\ 
+        Day passed                             & ~       & ~      & ~    & *    & ~ & ~ \\ 
+        \textbf{Other}                         & ~       & ~      & ~    & ~    & ~ & ~ \\ 
+        Preference changed                     & ~       & ~      & *    & ~    & ~ & ~ \\ 
+        %Achievement unlocked     \vline       & ~       & ~      & ~    & ~    & ~ & X \\ 
+        %Recommended foodplan generated \vline & X       & X      & X    & ~    & ~ & ~ \\ 
+        Recipe found                           & ~       & *      & ~    & ~    & ~ & ~ \\ 
+        ~                                      & ~       & ~      & ~    & ~    & ~ & ~ \\ 
+        ~                                      & ~       & ~      & ~    & ~    & ~ & ~ \\
+        \hline
+    \end{tabular}
 \end{table}
