@@ -1,12 +1,34 @@
 \section{Structure}
 In this section we will be describing the overall structure of the program, through class diagrams.
 
-\subsection{Individual class description}\fxnote{Remove some of this shit..}
-The \textbf{Foodplan} class describes a schedule of planned meals that a user can administrate and follow.
-It can consists of 0 to many meals.
+\subsection{Individual class description}
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\textwidth]{Development/ProblemDomain/MealClass.pdf}
+	\label{MealClass}
+\end{figure}
 The \textbf{Meal} class contains information about a meal and when to make/eat it. It consists of recipes.
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\textwidth]{Development/ProblemDomain/FoodClass.pdf}
+	\label{FoodClass}
+\end{figure}
+\textbf{Food} 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\textwidth]{Development/ProblemDomain/UserSettingsClass.pdf}
+	\label{UserSettingsClass}
+\end{figure}
+\textbf{User settings}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\textwidth]{Development/ProblemDomain/RecipeClass.pdf}
+	\label{RecipeClass}
+	\end{figure}
 \textbf{Recipes} consists of \textbf{Food}.
 
 \subsection{Class diagram description}
@@ -22,5 +44,3 @@ Food objects can be part of a \textbf{Shopping List}, a user \textbf{Inventory},
 	\caption{Relation between classes.}
 	\label{fig:classDiagram}
 \end{figure}
-
-\fxnote{Update diagram to anders super-style with attributes}
