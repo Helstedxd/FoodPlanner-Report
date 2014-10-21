@@ -22,7 +22,7 @@ User B is a young student who is in a relationship. User B has a tight budget an
 
 
 \section{User pattern}
-The user pattern shows an abstraction between the interactions i the system and actor. To show these interactions an state machine diagram have been chosen. The diagram shows the how the dynamic states can shift trough interactions with the actor. Even tough many of the details is excluded, it still gives a good overview of how the logic i set up in the user pattern and how the the dynamic flow goes. 
+The user pattern shows an abstraction between the interactions i the system and actor. To show these interactions state machine diagrams have been chosen. The diagrams shows the how the dynamic states can shift trough interactions with the actor. Even though many of the details is excluded, it still gives a good overview of how the logic i set up in the user pattern and how the the dynamic flow goes. 
 
 The purpose of the diagram is to create an overview of the application domains interactions with the system. This will be used to find acquirements for the functions and user interface. There are three user pattern diagrams, each representing different areas of the system. The three diagrams showcase the user patterns in the:
 \begin{itemize}
@@ -62,4 +62,5 @@ The possible options in form of editing is to change the quantity or expiration 
 When choosing Change quantity it works like the Change quantity in the shopping list, which means that choosing an amount that leaves it at zero deletes the item, and leaving it below zero result in an error. When The user tries to change the expiration date, the system prompts for a new date. All dates will be valid, which means that an item which was expired can go "unexpired" as described at the diagram \ref{MealClass}. This also works the other way around as an fresh item can expire if the date changes to the day prior.
 
 
-\section{Conclusion}
+\section*{Summary}
+The actor specification helped to establish a understanding of how the user base will interact with the system. The user patterns helped to reinforce that understand. By making the user patterns some flaws in the design were discovered which resulted in varies tweaks nd reworks.
