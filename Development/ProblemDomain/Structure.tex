@@ -1,13 +1,36 @@
 \section{Structure}
 In this section we will be describing the overall structure of the program, through class diagrams.
 
-\subsection{Individual class description}\fxnote{Remove some of this shit..}
-The \textbf{Foodplan} class describes a schedule of planned meals that a user can administrate and follow.
-It can consists of 0 to many meals.
+\subsection{Individual class description}
+In this subsection the different classes will be described with a short text.
 
-The \textbf{Meal} class contains information about a meal and when to make/eat it. It consists of recipes.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\textwidth]{Development/ProblemDomain/FoodClass.pdf}
+	\label{FoodClass}
+\end{figure}
+The \textbf{Food} class contains information about the quantity and expiration date of an food item. The food items can be found on the lists inventory or shopping list.
 
-\textbf{Recipes} consists of \textbf{Food}.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\textwidth]{Development/ProblemDomain/MealClass.pdf}
+	\label{MealClass}
+\end{figure}
+The \textbf{Meal} class contains information about a meal and when to make it. It consists of recipes.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\textwidth]{Development/ProblemDomain/UserSettingsClass.pdf}
+	\label{UserSettingsClass}
+\end{figure}
+The \textbf{User settings} class contains preferences from the user which the system should take into consideration.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\textwidth]{Development/ProblemDomain/RecipeClass.pdf}
+	\label{RecipeClass}
+	\end{figure}
+\textbf{Recipes} consists of \textbf{Food}. It also contains information on how to prepare the meal from the recipe.
 
 \subsection{Class diagram description}
 The class diagram is structured with \textbf{Food} as the central class. 
@@ -22,5 +45,3 @@ Food objects can be part of a \textbf{Shopping List}, a user \textbf{Inventory},
 	\caption{Relation between classes.}
 	\label{fig:classDiagram}
 \end{figure}
-
-\fxnote{Update diagram to anders super-style with attributes}
