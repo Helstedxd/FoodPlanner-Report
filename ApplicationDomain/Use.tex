@@ -35,18 +35,18 @@ When the user actor traverses trough the system, the actor will undertake one of
 The first diagram is the one for the Shopping list, in this part of the system the user actor operates under the administrative role.
 The option to go back or cancel have not been drawn on the diagrams as there only contribution is to make the diagrams less readable and add redundant repetitions, that goes for all of the diagrams.
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=1.0\textwidth]{ApplicationDomain/upShoppingList.pdf} 
-	\caption{The view shopping list state diagram}
-	\label{Shopping_List_Figure}
-\end{figure}
-When the user goes to the shopping list, the program will wait for him to either add or delete an product. If he chooses to add a product to the list, he will be asked to chose a product. The product also needs a quantity that specifies how much of the product is needed to be listed (2 litres of milk or ½ kilo of flour). If an valid quantity is given it will be added to the shopping list an the user will be able to add or delete another product. The only quantity that is not acceptable is value that is below or equal to zero.
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=1.0\textwidth]{ApplicationDomain/upShoppingList.pdf} 
+%	\caption{The view shopping list state diagram}
+%	\label{Shopping_List_Figure}
+%\end{figure}
+%When the user goes to the shopping list, the program will wait for him to either add or delete an product. If he chooses to add a product to the list, he will be asked to chose a product. The product also needs a quantity that specifies how much of the product is needed to be listed (2 litres of milk or ½ kilo of flour). If an valid quantity is given it will be added to the shopping list an the user will be able to add or delete another product. The only quantity that is not acceptable is value that is below or equal to zero.
+%
+%The user is also able to delete a product from the shopping list. The user will then have to chose an item already present on the list and then chose how much of the product tat should be removed from the list. If the user chooses a quantity that will leave the product at a zero quantity the product will be removed altogether from the list. For example if the list contains four apples, and the user removes three apples, one apple will still be present on list. However, if the user decided to remove four apples, the list will no longer contain the product apples. It should be noted that trying to remove a quantity of a product that will leave i a negative value will result in an error.
 
-The user is also able to delete a product from the shopping list. The user will then have to chose an item already present on the list and then chose how much of the product tat should be removed from the list. If the user chooses a quantity that will leave the product at a zero quantity the product will be removed altogether from the list. For example if the list contains four apples, and the user removes three apples, one apple will still be present on list. However, if the user decided to remove four apples, the list will no longer contain the product apples. It should be noted that trying to remove a quantity of a product that will leave i a negative value will result in an error.
 
-
-The second diagram is the one for the foodplan, in this part of the system the user actor operates under the planing role.
+This diagram is for the foodplan, in this part of the system the user actor operates under the planing role.
 
 \begin{figure}[H]
 	\centering
