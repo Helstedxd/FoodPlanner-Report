@@ -4,33 +4,42 @@
 	
 	\chapter{Functions}
 	\section{Function definitions}
-	The diagrams in \ref{Usage} contain different functions these functions have been given a name and listed in the following tables, where they have been assigned a complexity of Simple, Medium or Complex, and they have been assigned one or more of the following types; Read, Update, Calculate or Signaling.
-	\begin{table}[H]
+	The diagrams in \ref{Usage} contain different functions these functions have been given a name and listed in the following tables, where they have been assigned a complexity of Simple, Medium or Complex, and they have been assigned one or more of the following types; Read, Update, Calculate or Signaling. The more complex functions are further elaborated under each table.
+\begin{table}[H]
 	\centering
-	\caption{Shopping list}
-		\begin{tabular}{|l|l|l|}\hline
+	\caption{Shopping list}\fxnote{WARNING: Shopping list must be updated, because we no longer want to be able to add manually, but it only should happen automatically.
+	\begin{tabular}{|l|l|l|}\hline
 		\textbf{Function}&\textbf{Complexity}&\textbf{Type}\\\hline
-	  Update shopping list  &  ???     & Update \\\hline
+	  Update shopping list  &  Complex & Update \\\hline
 	  Add item              &  Medium  & Update \\\hline
 	  Remove item           &  Medium  & Update \\\hline
 	  View shopping list    &  Simple  & Read   \\\hline
-	  \end{tabular}
-	\linebreak
-	\caption{Food plan}
-	  \begin{tabular}{|l|l|l|}\hline
+  \end{tabular}
+  \begin{flushleft}
+    \textbf{Update shopping list:}
+  \end{flushleft}
+	\caption{Food plan:}
+  \begin{tabular}{|l|l|l|}\hline
 		\textbf{Function}&\textbf{Complexity}&\textbf{Type}\\\hline
 	  Add meal              &  Complex & Calculate, update \\\hline
 	  Remove meal           &  Simple  & Update            \\\hline
 	  View food plan        &  Simple  & Read              \\\hline
-	  \end{tabular}
-	\linebreak
-	\caption{Inventory}
-	  \begin{tabular}{|l|l|l|}\hline
+  \end{tabular}
+  \begin{flushleft}
+    \textbf{Add meal:}
+  \end{flushleft}
+	\caption{Inventory:}
+  \begin{tabular}{|l|l|l|}\hline
 		\textbf{Function}&\textbf{Complexity}&\textbf{Type}\\\hline
 	  View inventory        &  Simple  & Read   \\\hline
 	  Add Item              &  Complex & Update \\\hline
 	  Edit Item             &  Complex & Update \\\hline
 	  Remove Item           &  Simple  & Update \\\hline
-\end{tabular}	  	  
-	\end{table}
-	\fxnote{Christian yo, når du beskriver 'edit' så nævn at det både er 'change ex date' og 'change quantity'}
+  \end{tabular}
+  \begin{flushleft}  	  
+    \textbf{Add item:}
+    
+    \textbf{Edit item:}
+  \end{flushleft}
+\end{table}
+\fxnote{Christian yo, når du beskriver 'edit' så nævn at det både er 'change ex date' og 'change quantity'}
