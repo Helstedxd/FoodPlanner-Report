@@ -7,16 +7,14 @@
 	The diagrams in \ref{Usage} contain different functions these functions have been given a name and listed in the following tables, where they have been assigned a complexity of Simple, Medium or Complex, and they have been assigned one or more of the following types; Read, Update, Calculate or Signaling. The more complex functions are further elaborated under each table.
 \begin{table}[H]
 	\centering
-	\caption{Shopping list}\fxnote{WARNING: Shopping list must be updated, because we no longer want to be able to add manually, but it only should happen automatically.}
+	\caption{Shopping list}
 	\begin{tabular}{|l|l|l|}\hline
 		\textbf{Function}&\textbf{Complexity}&\textbf{Type}\\\hline
 	  Update shopping list  &  Complex & Update \\\hline
-	  Add item              &  Medium  & Update \\\hline
-	  Remove item           &  Medium  & Update \\\hline
 	  View shopping list    &  Simple  & Read   \\\hline
   \end{tabular}
   \begin{flushleft}
-    \textbf{Update shopping list:}
+    \textbf{Update shopping list:} The update function will be triggered by the signal function from the inventory "Update shopping list" function". When a meal is added or removed from the food plan. The shopping list should represent what ingredients that is needed to prepare the meals in the foodplan.
   \end{flushleft}
 	\caption{Food plan:}
   \begin{tabular}{|l|l|l|}\hline
@@ -26,12 +24,13 @@
 	  View food plan        &  Simple  & Read              \\\hline
   \end{tabular}
   \begin{flushleft}
-    \textbf{Add meal:}
+    \textbf{Add meal:} The add meal function is given the complex status as it involves many actions ni order to add the meal to the schedule. When the user goes trough the steps necessary to schedule a meal, the system will do a lookup in order to create a list of needed ingredients. This list will be compared with what the user has in the inventory, and any ingredients that is not present on the list will then be added to the shopping list. This is were the previously described function comes into play.
   \end{flushleft}
 	\caption{Inventory:}
   \begin{tabular}{|l|l|l|}\hline
 		\textbf{Function}&\textbf{Complexity}&\textbf{Type}\\\hline
 	  View inventory        &  Simple  & Read   \\\hline
+	  Update shopping list  &  simple  & Signal \\\hline
 	  Add Item              &  Complex & Update \\\hline
 	  Edit Item             &  Complex & Update \\\hline
 	  Remove Item           &  Simple  & Update \\\hline
