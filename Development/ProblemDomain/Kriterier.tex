@@ -1,17 +1,45 @@
+\section{Priority of criteria}
+
+When designing a software based system, it is important to consider which criteria is needed for the system, and if some of the criteria is more important than others. In this section the criteria is going to be put into a table, in the table the criteria is listed, and the importance of them range from very important to less important. The table also states if the criterion is irrelevant or trivial.
+
 \begin{table}[h]
 \begin{tabular}{|l|c|c|c|c|c|}\hline
-Kriterier       & Meget vigtigt & Vigtigt & Mindre vigtigt & Irrelevant & Trivielt opfyldt \\\hline
-Brugbart        &               & X       &                &            &                  \\\hline
-Sikkert         &               &         & X              &            &                  \\\hline
-Effektivt       &               &         & X              &            &                  \\\hline
-Korrekt         & X             &         &                &            &                  \\\hline
-Pålidelligt     &               &         & X              &            &                  \\\hline
-Vedligeholdelse &               & X       &                &            &                  \\\hline
-Testbart        &               & X       &                &            &                  \\\hline
-Flekibelt       &               & X       &                &            &                  \\\hline
-Forståeligt     &               &         & X              &            &                  \\\hline
-Genbrugbart     &               &         &                & X          &                  \\\hline
-Flytbart        &               &         &                & X          &                  \\\hline
-Intergerbart    &               &         & X              &            &                  \\\hline
+Criteria        & Very important & Important & Less important & Irrelevant & Trivially fulfilled \\\hline
+Useful          &                & X         &                &            &                     \\\hline
+Secure          &                &           & X              &            &                     \\\hline
+Effective       &                &           & X              &            &                     \\\hline
+Correct         & X              &           &                &            &                     \\\hline
+Reliable        &                &           & X              &            &                     \\\hline
+Maintenance     &                & X         &                &            &                     \\\hline
+Testable        &                & X         &                &            &                     \\\hline
+Flexible        &                & X         &                &            &                     \\\hline
+Understandable  &                &           & X              &            &                     \\\hline
+Reusable        &                &           &                & X          &                     \\\hline
+Movable         &                &           &                & X          &                     \\\hline
+Integrable      &                &           & X              &            &                     \\\hline
 \end{tabular}
 \end{table}
+
+\textbf{Useful} indicates the adaptation of the organisational, work related, and technical surroundings. This is important for the food planner system to fulfill, since the organisational surroundings indicates that the user has to be able to organise the meals correctly.
+
+\textbf{Secure} indicates if the system is secure against unauthorized accessibility. This is less important in the food planner system, since the worst security breach would just reveal what people eat.
+
+\textbf{Effective} indicates the economical usage of the technical platform facilities. This is marked less important, as smartphones have different technical facilities, and therefore they can not all be used. Furthermore it is not needed to use all these facilities for the food planner system.
+
+\textbf{Correct} indicates the level of fulfillment of the formulated requirements. The correctness of the food planner system is very important, as it is needed to live up to requirements found in the analysis part for the system to be effective.
+
+\textbf{Reliable} indicates the fulfillment of the requires precision when functions are executed. The reliability is less important for the food planner system, as functions can work a little different than stated, as long as the user gets a usable result.
+
+\textbf{Maintenance} indicates the cost of finding and correcting errors in the system. The maintenance of the food planner system is important, as error will be made throughout the project. Therefore it is important that error can be fixed for the system to work properly.
+
+\textbf{Testable} indicates the cost of securing that the system fulfills the requirements. Is important for the food planner system to be testable, as testing is part of the waterfall method, and also a good way for the system to be maintainable which is important to the system.
+
+\textbf{Flexible} indicates the cost of changing the system once it has been taken into use. Flexibility is important for the food planner system, as changing and updating is going to be done after the release, either because new functionality is needed, or just to load in more recipes in the program.
+
+\textbf{Understandable} indicates the effort to make sure that the system can be understood in the context. Understandability is less important to the food planner system, as the system will not be released for other developers to work on.
+
+\textbf{Reusable} indicates the possibility to reuse parts of the system in similar systems. Reusability is irrelevant as the system is not going to be released, therefore it will not be used in similar systems.
+
+\textbf{Movable} indicates the cost of moving the system to another technical platform. For the food planner system it is irrelevant to consider the movability, as the system is not going to be moved to other technical platforms than smartphones and tablets.
+
+\textbf{Integrable} indicates the cost of connecting the system to other systems. Integrability is less important for the food planner system, because the system probably will not be connected to other systems, unless API's is going to be included.
