@@ -24,7 +24,7 @@
 	  View food plan        &  Simple  & Read              \\\hline
   \end{tabular}
   \begin{flushleft}
-    \textbf{Add meal:} The add meal function is given the complex status as it involves many actions in order to add the meal onto the schedule. When the user goes trough the steps necessary to schedule a meal, the system will do a lookup in order to create a list of needed ingredients. This list will be compared with what the user has in the inventory, and any ingredients that is not present on the list will then be added to the shopping list. This is were the previously described function comes into play.
+    \textbf{Add meal:} The add meal function is given the complex status as it involves many actions in order to add the meal to the schedule. When the user goes trough the steps necessary to schedule a meal, the system will do a lookup in order to create a list of needed ingredients. This list will be compared with what the user has in the inventory, and any ingredients that is not present on the list will then be added to the shopping list. This is were the previously described function comes into play.
   \end{flushleft}
 	\caption{Inventory:}
   \begin{tabular}{|l|l|l|}\hline
@@ -36,8 +36,8 @@
 	  Remove Item           &  Simple  & Update \\\hline
   \end{tabular}
   \begin{flushleft}  	  
-    \textbf{Add item:} The add item function have been marked as complex. The function is complex as there many steps involved when adding an item, see \Cref{InvDesc} for a description of these steps. By having this function the user is able to add food to their storage manually.
+    \textbf{Add item:} The add item function have been marked as complex. The function is complex as there are many steps involved when adding an item, see \Cref{InvDesc} for a description of these steps. By having this function the user is able to add food to their storage manually.
     
-    \textbf{Edit item:} The edit item function is complex as well. If the user changes the expiration date on an item,it could potential update the inventory as an item can "unexpire". The same goes for changing the quantity of an food item. If the quantity reaches zero the item will be deleted, and therefore an update in the storage will be needed.
+    \textbf{Edit item:} The edit item function is complex as well. If the user changes the expiration date of an item, it could potentially update the inventory as an item can "unexpire". The same goes for changing the quantity of an food item. If the quantity reaches zero the item will be deleted, and therefore an update in the storage will be needed.
   \end{flushleft}
 \end{table}
