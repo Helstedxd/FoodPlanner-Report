@@ -1,0 +1,43 @@
+\section{Model View ViewModel}
+To separate and organize the application we are using the MVVM-Pattern.
+
+The MVVM pattern is divided into 3 areas:
+
+\begin{itemize}
+	\item The \textbf{Model} is the data.
+	\item The \textbf{View} is what you see on the screen.
+	\item The \textbf{ViewModel} presents the data in the model to the view.
+\end{itemize}
+
+The pattern has a very loosely coupled design.
+The View classes does not know that the model exists, while the ViewModel does not know about the view. The Model does not now know the existence and View and ViewModel.
+
+The MVVM is well suited for the WPF platform, since WPF has been designed around the mvvm pattern.
+
+\subsection{Data binding}
+Synchronizing the View with the ViewModel happens automatically through data binding.
+The view binds to properties in the ViewModel, which in turn exposes data from the Model. In fact there is no need to write any code in the ViewModel that updates the view.
+
+The views datacontext is bound to the ViewModel, which makes it easy to bind and display different properties in the viewmodel on the view.
+
+When a property changes, the new value automatically propagates to the view through databinding.
+When a user clicks a button on the view, a command in the ViewModel executes the requested action.
+
+The separation between the View and ViewModel makes ViewModel classes easy to unit test. Just like the View, unit tests are just another type of ViewModel consumer.
+
+%http://msdn.microsoft.com/en-us/magazine/dd419663.aspx
+%\citep{}
+
+\subsection{Relaying command logic}
+\fxnote{this is not fully written.}
+In order to relay commands to private methods...
+
+Updating (INotifyPropertychanged)
+
+ObservableObject 
+
+All the viewmodels inherits from the ObservableObject class, which implements the INotifyPropertyChanged interface, that makes it possible to notify the view about propertychanges
+
+We use a simple library called MVVMFoundation that implements these general purpose ObservableObject / RelayCommand.
+
+
