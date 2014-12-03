@@ -1,10 +1,10 @@
-\chapter{Classes and Events}
+\section{Classes and Events}
 The purpose of this chapter is to select and analyse components from the problem domain. These components is splitted into classes and events.
 
-\section{Classes}
+\subsection{Classes}
 In this section a list of classes will be presented. The classes there is described are those which have been chosen through an class candidate analysis.
 
-\subsection{Physical}
+\subsubsection{Physical}
 \begin{itemize}
 \item Product
     \subitem This class is used to identify different food products for the recipes with information such as food type and expiration date. This class is essential for the program and will be used frequently.
@@ -14,27 +14,27 @@ In this section a list of classes will be presented. The classes there is descri
     \subitem This class contains information about a recipe and when it is scheduled to be cooked.
 \end{itemize}
 
-\subsection{Persons}
+\subsubsection{Persons}
 \begin{itemize}
 \item User
     \subitem This class contains information about the preferences of a specific user, and will allow the solution to synchronize/share data with other users or devices.
 \end{itemize}
 
-\subsection{Places}
+\subsubsection{Places}
 \begin{itemize}
 \item Shop
     \subitem This class holds information about the location of specific groceries and sales.
 \end{itemize}
 
-\subsection{Other}
+\subsubsection{Other}
 \begin{itemize}
 \item Achievement
     \subitem Information about point, progress and criterias. %criterias er stavet rigtigt.
 \end{itemize}
 
-\section{Events}
+\subsection{Events}
 In this section a list of events will be presented. The events there is described are those which have been chosen trough an event candidate analysis.
-\subsection{Consumption}
+\subsubsection{Consumption}
 \begin{itemize}
 \item Budget used
     \subitem Trigger: The balance have been changed as products have been bought.
@@ -48,7 +48,7 @@ In this section a list of events will be presented. The events there is describe
     \subitem Trigger: When a product reaches its expiration date it should be thrashed" and removed from the inventory.
 \end{itemize}
 
-\subsection{Planning}
+\subsubsection{Planning}
 \begin{itemize}
     \item Recipe scheduled
         \subitem Trigger: When a recipe is tied to a date in the foodplan.
@@ -60,14 +60,14 @@ In this section a list of events will be presented. The events there is describe
         \subitem Trigger: When a foodplan is completed, by which there are no days without a recipe, the shopping list will be locked and considered completed as well.
 \end{itemize}
 
-\subsection{Preferences / settings}
+\subsubsection{Preferences / settings}
 \begin{itemize}
 \item Preference changed
     \subitem Trigger: When the user goes to a settings menu to ban products from the system, due to allergies, diets or preference.
 \end{itemize}
 
 
-\subsection{Other}
+\subsubsection{Other}
 \begin{itemize}
 \item Achievement unlocked
     \subitem Trigger: A user has fulfilled the requirements for a achievement.
@@ -75,7 +75,7 @@ In this section a list of events will be presented. The events there is describe
 %   \subitem Trigger: When the user prompts the system to create a recommendation list.
 \end{itemize}
 
-\section{Event Table}
+\subsection{Event Table}
 An event table have been constructed in order to get an overview of the relations between classes and events. This allows for a better judgement of which classes are relevant. See \.ref DELIMINATION for which classes have been selected for this report.
 
 %\label{MealClass}

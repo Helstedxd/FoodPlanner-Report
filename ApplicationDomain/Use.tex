@@ -1,7 +1,7 @@
-\chapter{Usage}\label{Usage}
+\section{Usage}\label{Usage}
 This chapter will describe the systems interaction with its surroundings. This will be done by making an actor specification and then presenting user pattern diagrams, which will be showcased in state machines.
 
-\section{Actor specification}
+\subsection{Actor specification}
 \label{Actor_specification}
 An actor will be described by an actor specification , the actor is a user of the system.
 
@@ -21,7 +21,7 @@ An actor will be described by an actor specification , the actor is a user of th
 
 
 
-\section{User pattern}
+\subsection{User pattern}
 The user pattern shows an abstraction between the interactions in the system and actor. State machine diagrams are used to show these interactions. The diagrams show how the dynamic states can shift trough interactions with the actor. Even though many of the details is excluded, it still gives a good overview of how the logic is set up in the user pattern and how the the dynamic flow goes. 
 
 The purpose of the diagram is to create an overview of the application domain's interactions with the system. This will be used to find acquirements for the functions and user interface. There are three user pattern diagrams, each representing different areas of the system. The three diagrams showcase the user patterns in the:
@@ -79,6 +79,5 @@ The following diagram, is the last diagram which also covers the inventory. In t
 The possible options in form of editing is to change the quantity or expiration date. 
 When choosing \textit{Change quantity} it works like the \textit{Change quantity} in the shopping list, which means that choosing an amount that leaves it at zero deletes the item, and leaving it below zero result in an error. When the user tries to change the expiration date, the system prompts for a new date. All dates will be valid, which means that an item which was expired can go "unexpired" as described at the diagram \cref{MealClass}. This also works the other way around as an fresh item can expire if the date changes to the day prior to the day it expires.
 
-
-\section*{Summary}
+\subsection*{Summary}
 The actor specification helped to establish a understanding of how the user base will interact with the system. The user patterns helped to reinforce that understanding. By making the user patterns, some flaws in the design were discovered which resulted in varies tweaks and reworks.\fxnote{Skal vi have sidste sætning med, når vi ikke har beskrevet disse fejl?}
