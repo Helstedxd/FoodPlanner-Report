@@ -15,3 +15,5 @@ The top bar of in inventory (Ingredient, Quantitiy, Expiration date) does not fi
 When adding and removing rated ingredients, they can first be seen when going back to the settings screen again.
 
 When adding and removing unwanted ingredients, they can first be seen when going back to the settings screen again.
+
+It should not be able for the user to add a BlackListed ingredient to the StockList
