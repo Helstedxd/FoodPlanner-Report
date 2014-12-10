@@ -1,0 +1,17 @@
+When going back to the foodplan from the meal, it exits to the current week and not the week you where last looking at.
+
+The number of participants disappear when clicking update.
+
+When Scheduling a meal, the user should be able to choose the number of persons to schedule for.
+
+Maybe too many recipes are found in the search at one time.
+
+The add button in shopping list are hard to know what it does.
+
+When adding items in the inventory, it is hard to see where the item is added.
+
+The top bar of in inventory (Ingredient, Quantitiy, Expiration date) does not fit the actual items.
+
+When adding and removing rated ingredients, they can first be seen when going back to the settings screen again.
+
+When adding and removing unwanted ingredients, they can first be seen when going back to the settings screen again.
