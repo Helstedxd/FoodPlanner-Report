@@ -1,11 +1,11 @@
 \subsection{Design Language}
-This section will use the physical design process, in which the \nameref{Sketches} and the \nameref{ConsMod} are combined, to produce the design language for the program. The physical design process is concerned with defining the look and feel of the program. The process also defines the allocation of functions and the knowledge between a user and a device. The product, which is the design language, is a standardization of the interaction with the program and the physical style of the program e.g. buttons, shapes, colours. This means that the design language is a guide line during the development phase but that the actual program can differentiate itself from the design language.
+This section will use the physical design process, in which the \nameref{Sketches} \cref{Sketches} and the \nameref{ConsMod} \cref{ConsMod} are combined, to produce the design language for the program. The physical design process is used to define the look and feel of the program. The process also defines the allocation of functions and the knowledge between a user and a device. The product, which is the design language, is a standardization of the interaction with the program and the physical style of the program e.g. buttons, shapes, colours. This means that the design language is a guideline during the development phase and therefore, that the actual program can differentiate itself from the design language.
 
 \subsubsection{Program Screens and Functionality} \label{ScreensandFunctionality}
-The domains were identified in \cref{ScenarioCorpus} and they are as follows: planning, shopping, recipes, inventory and general. In \nameref{Sketches} the domains were used to structure the screens in the program. In the \nameref{ConsMod} the domains were used as main elements. Because of the structural contribution that the domains give they will be used as a basis for the actual screens of the program. The following text will describe each screen of the program by the funcionalities of the particular screen.
+The domains were identified in \cref{ScenarioCorpus} and they are as follows: planning, shopping, recipes, inventory and general. In \nameref{Sketches} the domains were used to structure the screens in the program. In the \nameref{ConsMod} some of the domains were used as main elements, because of the structural contribution that the domains give, they will be used as a basis for the actual screens of the program. The following text will describe each screen of the program by the funcionalities of the particular screen.
 
 \paragraph{Planning}
-By first looking at the \nameref{ConsMod} we see that there are some functional requirements stated for the Meal Planner. The requirements are listed below.
+By first looking at the \nameref{ConsMod} we see that there are some functional requirements stated for the Meal Planner:
 
 \begin{itemize}
 \item Recipes planned for a dynamic number of people.
@@ -13,12 +13,12 @@ By first looking at the \nameref{ConsMod} we see that there are some functional 
 \item Change meal Plans on the fly.
 \end{itemize}  
 
-By also looking at the \nameref{Sketches} and more specifically in \cref{MealScheduleSketches} we can add to the list of requirements. The additions are listed below.
+By also looking at the \nameref{Sketches} \cref{MealScheduleSketches}, we can add these requirements to the list:
 
 \begin{itemize}
 	\item A weekly overview of planned meals.
 		\begin{itemize}
-			\item With information  for each meal e.g. name of the recipe, date and number of ingredients the user has.
+			\item With information  for each meal e.g. name of the recipe,the date for the cooking, and the number of ingredients the user has.
 		\end{itemize}
 	\item A view of a specific day and the planned recipes.
 		\begin{itemize}
@@ -29,7 +29,7 @@ By also looking at the \nameref{Sketches} and more specifically in \cref{MealSch
 \end{itemize} 
 
 \paragraph{Shopping}
-By also looking at the \nameref{ConsMod} for this screen we can identify different functional requirements. The requirements are listed below.
+By also looking at the \nameref{ConsMod} for this screen we can identify different functional requirements:
 
 \begin{itemize}
 	\item Dynamic number of days to shop for.
@@ -38,7 +38,7 @@ By also looking at the \nameref{ConsMod} for this screen we can identify differe
 	\item Meal plan changes effects the shopping list.
 \end{itemize} 
 
-By also looking at the \nameref{Sketches} and more specifically in \cref{ShoppingListSketches} we can add to the list of requirements. The additions are listed below.
+By also looking at the \nameref{Sketches} \cref{ShoppingListSketches}, we can add these requirements to the list:
 
 \begin{itemize}
 	\item An overview of all ingredients on the shopping list.
@@ -50,7 +50,7 @@ By also looking at the \nameref{Sketches} and more specifically in \cref{Shoppin
 \end{itemize}
 
 \paragraph{Recipes}
-The \nameref{ConsMod} also states different functional requirements for this screen. The requirements are listed below.
+The \nameref{ConsMod} also states different functional requirements for this screen:
 
 \begin{itemize}
 	\item Ingredients.
@@ -64,7 +64,7 @@ The \nameref{ConsMod} also states different functional requirements for this scr
 	\item Diets
 \end{itemize} 
 
-The list can be expanded with the functional requirement from \nameref{Sketches}, specific in \cref{RecipesSketches}
+The list can be expanded with the functional requirement from \nameref{Sketches} \cref{RecipesSketches}:
 
 \begin{itemize}
 	\item A search function.
@@ -76,19 +76,19 @@ The list can be expanded with the functional requirement from \nameref{Sketches}
 	\item A view of a specific recipe.
 		\begin{itemize}
 			\item Information such as preparation guide, ingredients and a picture.
-			\item A function add the recipe to the meal schedule.
+			\item A function to add the recipe to the meal schedule.
 		\end{itemize}
 \end{itemize}
 
 \paragraph{Inventory}
-The \nameref{ConsMod} States different functionalities requirements for the inventory screen. These requirements are listed below.
+The \nameref{ConsMod} can also be used to state different functionality requirements for the inventory screen:
 
 \begin{itemize}
 	\item A function to manually add ingredients.
 	\item Automatic adding of bought shopping list ingredients.
 \end{itemize}
 
-The additions to the functional requirements from \nameref{Sketches} and more \cref{RecipesSketches} are listed below.
+The additions to the functional requirements from \nameref{Sketches} \cref{RecipesSketches} are listed below:
 
 \begin{itemize}
 	\item A search function to find and add specific ingredients.
@@ -97,11 +97,11 @@ The additions to the functional requirements from \nameref{Sketches} and more \c
 		\begin{itemize}
 			\item Information such as Ingredient name, purchase date and quantity.
 		\end{itemize}
-	\item A function or view that easily groups ingredients of the same name but has different quantities and/ or purchase dates.
+	\item A function or view that easily groups ingredients of the same name but with different quantities and/ or purchase dates.
 \end{itemize}  
 
 \paragraph{General}   
-The \nameref{ConsMod} does not include this domain and the design requirements will therefore be identified from the \nameref{Sketches}. The design requirements are listed below.
+The \nameref{ConsMod} does not include this domain and the design requirements will therefore solely be identified from the \nameref{Sketches}:
 
 \begin{itemize}
 	\item An overview of all the different setting categories.
@@ -112,13 +112,15 @@ The \nameref{ConsMod} does not include this domain and the design requirements w
 \end{itemize} 
  
 \subsubsection{Program Navigation}
-The main method of the navigation in the program is done via the bottom navigation bar shown on \cref{NavigationBarSketch}. This bar can be used from all the screens of the program and directs the user to one of the five main screens written above in \textit{Program Screens and Functionality}. If the user navigates away from one of the main screens, e.g. when viewing a list of recipes the user could press a recipe and view that specific recipe, the top of the screen will give a back functionality. 
+The main method of the navigation in the program is done via the bottom navigation bar shown on \cref{NavigationBarSketch}. This bar can be used from all the screens of the program and directs the user to one of the five main screens written prior in this section, in \textit{Program Screens and Functionality}. If the user navigates away from one of the main screens, e.g. when viewing a list of recipe, the user can press a recipe and view that specific recipe, the top of the screen will then include a back functionality. 
 
 \subsubsection{Design Principles}
-This section will discuss different design subjects that are used as general principles in the design language for the program. These general principles are made to give the programs design coherence and by doing so increase the usability. 
+This section will discuss different design subjects that are used as general principles in the design language for the program. These general principles are created, to give the program's design coherence and thereby increase the usability.
 
+\paragraph{Navigation}
 The navigation in the program is mainly done via the bottom navigation bar. Consistently displaying and using this as the main way of navigation gives the program better usability. If the user is confused as to where he is in the program he can always use the bottom navigation bar to find his way to a screen that is familiar. Another consistency that the programs navigation has is the use of the top navigation bar. When the user is on any screen that is not one of the main screens the top bar will be used as a backwards navigation. The consistency of using both the bottom and top for navigation functions gives an easy of use and better usability.
 
+\paragraph{Mobile application}
 The program will be designed as a mobile application. It is therefore important that this is considered when defining more general principles for the program. These additional principles are listed and briefly described below.
 
 \begin{itemize}
