@@ -1,4 +1,4 @@
-\section{Model View ViewModel}
+\section{Model View ViewModel}\label{MVVMSection}
 To separate and organize the application we are using the MVVM-Pattern.
 
 The MVVM pattern is divided into 3 areas:
@@ -23,10 +23,7 @@ The views datacontext is bound to the ViewModel, which makes it easy to bind and
 When a property changes, the new value automatically propagates to the view through databinding.
 When a user clicks a button on the view, a command in the ViewModel executes the requested action.
 
-The separation between the View and ViewModel makes ViewModel classes easy to unit test. Just like the View, unit tests are just another type of ViewModel consumer.
-
-%http://msdn.microsoft.com/en-us/magazine/dd419663.aspx
-%\citep{}
+The separation between the View and ViewModel makes ViewModel classes easy to unit test. Just like the View, unit tests are just another type of ViewModel consumer\Cref{mvvm}.
 
 \subsection{Relaying command logic}
 \fxnote{this is not fully written.}
@@ -39,5 +36,3 @@ ObservableObject
 All the viewmodels inherits from the ObservableObject class, which implements the INotifyPropertyChanged interface, that makes it possible to notify the view about propertychanges
 
 We use a simple library called MVVMFoundation that implements these general purpose ObservableObject / RelayCommand.
-
-
