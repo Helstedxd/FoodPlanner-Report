@@ -115,5 +115,30 @@ The \nameref{ConsMod} does not include this domain and the design requirements w
 The main method of the navigation in the program is done via the bottom navigation bar shown on \cref{NavigationBarSketch}. This bar can be used from all the screens of the program and directs the user to one of the five main screens written above in \textit{Program Screens and Functionality}. If the user navigates away from one of the main screens, e.g. when viewing a list of recipes the user could press a recipe and view that specific recipe, the top of the screen will give a back functionality. 
 
 \subsubsection{Design Principles}
+This section will discuss different design subjects that are used as general principles in the design language for the program. These general principles are made to give the programs design coherence and by doing so increase the usability. 
+
+The navigation in the program is mainly done via the bottom navigation bar. Consistently displaying and using this as the main way of navigation gives the program better usability. If the user is confused as to where he is in the program he can always use the bottom navigation bar to find his way to a screen that is familiar. Another consistency that the programs navigation has is the use of the top navigation bar. When the user is on any screen that is not one of the main screens the top bar will be used as a backwards navigation. The consistency of using both the bottom and top for navigation functions gives an easy of use and better usability.
+
+The program will be designed as a mobile application. It is therefore important that this is considered when defining more general principles for the program. These additional principles are listed and briefly described below.
+
+\begin{itemize}
+	\item General
+		\begin{itemize}
+			\item Try to avoid to much redundant information on the screen
+			\item Avoid to many click function and mouseover functions.
+		\end{itemize}
+	\item Text
+		\begin{itemize}
+			\item The text has to be readable. That means using logical typography e.g. giving it the right size relative to the screen and an easy to read font.	
+			\item the use of font and text size has to be consistent.
+		\end{itemize}
+	\item Buttons
+		\begin{itemize}
+			\item The shape and color theme has to be consistent on buttons.
+			\item The size of the buttons has to be larger enough for a person to click with a finger.
+			\item Avoid to much text on the buttons. A good idea is to use icons.
+			\item Avoid using buttons when it is not necessary e.g. When editing an ingredient the program should update automatically.
+		\end{itemize}
+\end{itemize}    
 
 \input{Design/ColourChoice}
