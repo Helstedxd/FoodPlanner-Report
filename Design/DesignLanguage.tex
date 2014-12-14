@@ -1,19 +1,118 @@
 \subsection{Design Language}
-This section will use the physical design process, in which the prototypes and the conceptual model are combined, to produce the design language for the program. The physical design process is concerned with defining the look and feel of the program. The process also defines the allocation of functions and the knowledge between a user and a device. The product, which is the design language, is a standardization of the interaction with the program and the physical style of the program e.g. buttons, shapes, colours.
+This section will use the physical design process, in which the prototypes and the conceptual model are combined, to produce the design language for the program. The physical design process is concerned with defining the look and feel of the program. The process also defines the allocation of functions and the knowledge between a user and a device. The product, which is the design language, is a standardization of the interaction with the program and the physical style of the program e.g. buttons, shapes, colours. This means that the design language is a guide line during the development phase but that the actual program can differentiate itself a bit from the design language.
 
-\subsubsection{Program Screens and Functionality}
-The domains was identified in \cref{ScenarioCorpus} and they are as follows: planning, shopping, cooking, inventory and general. In \nameref{Sketches} the domains were used to structure the screens in the program so that each domain had its own screen. In the \nameref{ConsMod} \cref{ConceptualModelPicture} the domains were used as main elements. Because of the structural contribution that the domains give they will be used as a basis for the actual screens of the program. The following text will describe each screen of the program, the funcionalities of the particular screen and how the functionality is available for the user.
+\subsubsection{Program Screens and Functionality} \label{ScreensandFunctionality}
+The domains was identified in \cref{ScenarioCorpus} and they are as follows: planning, shopping, recipes, inventory and general. In \nameref{Sketches} the domains were used to structure the screens in the program so that each domain had its own screen. In the \nameref{ConsMod} the domains were used as main elements. Because of the structural contribution that the domains give they will be used as a basis for the actual screens of the program. The following text will describe each screen of the program, the funcionalities of the particular screen and how the functionality is available for the user.
 
 \paragraph{Planning}
+By first looking at the \nameref{ConsMod} we see that there are some functional requirements stated for the Meal Planner. The requirements are listed below.
 
+\begin{itemize}
+\item Recipes planned for a dynamic number of people.
+\item Varied meals.
+\item Change meal Plans on the fly.
+\end{itemize}  
+
+By also looking at the \nameref{Sketches} and more specifically in \cref{MealScheduleSketches} we can add to the list of requirements. The additions are listed below.
+
+\begin{itemize}
+	\item A weekly overview of planned meals.
+		\begin{itemize}
+			\item With information  for each meal e.g. name of the recipe, date and number of ingredients the user has.
+		\end{itemize}
+	\item A view of a specific day and the planned recipes.
+		\begin{itemize}
+			\item Display the current selected day the user is viewing.
+			\item A way to add a meal to the day.
+			\item A way to edit already scheduled meals.
+		\end{itemize}  
+\end{itemize} 
 
 \paragraph{Shopping}
+By also looking at the \nameref{ConsMod} for this screen we can identify different functional requirements. The requirements are listed below.
 
-\paragraph{Cooking}
+\begin{itemize}
+	\item Dynamic number of days to shop for.
+	\item Shared list.
+	\item Automatically add bought items to inventory.
+	\item Meal plan changes effects the shopping list.
+\end{itemize} 
+
+By also looking at the \nameref{Sketches} and more specifically in \cref{ShoppingListSketches} we can add to the list of requirements. The additions are listed below.
+
+\begin{itemize}
+	\item An overview of all ingredients on the shopping list.
+		\begin{itemize}
+			\item Displaying each ingredients name and quantity.
+		\end{itemize}		 
+	\item A search function to find and add specific ingredients.
+	\item A function to buy or add ingredients to the inventory.	
+\end{itemize}
+
+\paragraph{Recipes}
+The \nameref{ConsMod} also states different functional requirements for this screen. The requirements are listed below.
+
+\begin{itemize}
+	\item Ingredients.
+		\begin{itemize}
+			\item Displaying name and quantity of the ingredients.
+		\end{itemize}
+	\item Preparation
+		\begin{itemize}
+			\item An explanation of cooking steps for the specific recipe.
+		\end{itemize}
+	\item Diets
+\end{itemize} 
+
+The list can be expanded with the functional requirement from \nameref{Sketches}, specific in \cref{RecipesSketches}
+
+\begin{itemize}
+	\item A search function.
+	\item A list of recipes with little but relevant information.
+		\begin{itemize}
+			\item Information could be a picture of the recipe, recipe name, ingredients of the recipe and the number of ingredients the user has.
+		\end{itemize}
+	\item A categorization function
+	\item A view of a specific recipe.
+		\begin{itemize}
+			\item Information such as preparation guide, ingredients and a picture.
+			\item A function add the recipe to the meal schedule.
+		\end{itemize}
+\end{itemize}
 
 \paragraph{Inventory}
+The \nameref{ConsMod} States different functionalities requirements for the inventory screen. These requirements are listed below.
+
+\begin{itemize}
+	\item A function to manually add ingredients.
+	\item Automatic adding of bought shopping list ingredients.
+\end{itemize}
+
+The additions to the functional requirements from \nameref{Sketches} and more \cref{RecipesSketches} are listed below.
+
+\begin{itemize}
+	\item A search function to find and add specific ingredients.
+	\item A function to remove ingredients.
+	\item A list of ingredients with little but relevant information.
+		\begin{itemize}
+			\item Information such as Ingredient name, purchase date and quantity.
+		\end{itemize}
+	\item A function or view that easily groups ingredients of the same name but has different quantities and/ or purchase dates.
+\end{itemize}  
 
 \paragraph{General}   
- 
+The \nameref{ConsMod} does not include this domain and the design requirements will therefore be identified from the \nameref{Sketches}. The design requirements are listed below.
 
-   
+\begin{itemize}
+	\item An overview of all the different setting categories.
+		\begin{itemize}
+			\item Categories such as Stock, allergies, preferences and more.
+		\end{itemize}
+	\item A function to expand and display specific categories and the information for that category.
+\end{itemize} 
+ 
+\subsubsection{Program Navigation}
+The main method of the navigation in the program is done via the bottom navigation bar shown on \cref{NavigationBarSketch}. This bar can be used from all the screens of the program and directs the user to one of the five main screens written above in \textit{Program Screens and Functionality}. If the user navigates away from one of the main screens, e.g. when viewing a list of recipes the user could press a recipe and view that specific recipe, the top of the screen will give a back functionality. 
+
+\subsubsection{Design Principles}
+
