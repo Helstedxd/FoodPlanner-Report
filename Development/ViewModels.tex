@@ -54,14 +54,13 @@ The integer properties \textit{PersonsInHouseHold} and \textit{ShopAhead} can be
 The property \textit{SelectedStartUpPage} is used for selecting which page the program should display when started. This is the only setting that is not saved in the database, but as a option saved on the device instead, since it is setting for the program and not the user.
 
 The Settings page allows to add ingredients to different lists such as stock and unwanted ingredients, see \cref{ss:settings} for more details.
-The following properties is used to keep track of the selected ingredients when adjusting these settings:
-\begin{itemize}
-	\item BlacklistIngredient SelectedBlackListIngredient
-	\item GraylistIngredient SelectedGreyListIngredient 
-	\item StockQuantity SelectedStockQuantityIngredient
-	\item DietPreset SelectedDietPreset
-	\item int IngredientRatingValue
-\end{itemize}
+The following properties is used to keep track of the selected ingredients in the different lists when adjusting settings:
+\begin{lstlisting}[caption=Selected list items, language=CSharp]
+public BlacklistIngredient	SelectedBlackListIngredient { get; set; }
+public GraylistIngredient		SelectedGreyListIngredient { get; set; }
+public StockQuantity 				SelectedStockQuantityIngredient { get; set; }
+public DietPreset 					SelectedDietPreset { get; set; }
+\end{lstlisting}
 
 Most methods in the SettingsViewModel is used for adding and removing ingredients to list, and incrementing or decrementing values.
 
