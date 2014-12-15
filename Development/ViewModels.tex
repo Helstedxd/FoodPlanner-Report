@@ -1,0 +1,95 @@
+\chapter{Custom User Controls}
+
+\section{Ingredient Auto Completion} \label{sec:AutoComplete}
+Since we only allow the use of ingredients which already exists in the database, we need a way to get these ingredients when the user wants to add it in different situations, such as the inventory or the list of unwanted ingredients in settings.
+
+The IngredientAutoComplete is a UserControl that searches through ingredients in the database based on what a user types in to a search field. It will then list the most relevant beneath the search field and allow the user to click one.
+
+It exposes the DepencyProperties; MaximumItems and SelectItemCommand, which can be used to set how many items the should be displayed, and which command should be executed when the user selects an ingredient. This is set on the pages that uses this control.
+
+When SearchText property changes the control will try to repopulate the list of found ingredients. If a previous search with less letters came up with fewer ingredients than the maximum, the control will not attempt to query the database again, since that could not possibly give more results.
+
+\chapter{ViewModels}
+All pages has a corresponding ViewModel which it is binding its data-context to. So whenever data changes the View will be notified, and the ViewModel will receive input from the view.
+
+\section{Mealplan}
+
+The MealPlanViewModel has a DateTime property called ActiveDate, that is used to reference which week the user wants to look through meals. It has 7 other DateTime properties which references the individual days in the week. When ActiveDate is being set, it updates the MondayDate property, which is used by the remaining properties as reference.
+
+It also has a collection of Meal's for each day in the week. The collections contains the meals that belongs to the different weekdays according to the active date.
+
+These meals are added to the collection when changing the ActiveDate property?
+\fxnote{Describe this}
+
+\subsection{Methods}
+When clicking the arrow buttons to navigate between weeks, the button invokes a command, either NextWeek or PreviousWeek, which changes the ActiveDate property, and updates the Meal collections.
+
+
+\section{Recipe}
+
+The RecipeViewModel has a Recipe and a Meal property which are set, on initialization. 
+        public RecipeViewModel(Recipe recipe)
+        public RecipeViewModel(Meal meal)
+
+If initialized with a Recipe object, the Meal property remains null, and page only displays information about the Recipe. If the Meal is set either on initialization or when adding a Recipe to the mealplan, the page will also display information about the meal, such as date and participants.
+
+The ViewModel has the commands AddUpdateMealCommand and RemoveMealCommand. The AddUpdateMealCommand will either create a new meal with the recipe and add it to the mealplan, or update the meal if it is already set.
+The RemoveMealCommand removes the meal from the mealplan, the button that invokes this command is only visible when the Meal property is set.
+
+
+\section{Inventory}
+The InventoryViewModel has a property called InventoryIngredients which is a collection of all the food that the user has in the inventory.
+
+The CollectionView of InventoryIngredients is given a PropertyGroupDescription which groups all ingredients with the same name as one item. The name and total quantity can then be displayed on the page, while the individual ingredients can be expanded as well, as described in \cref{ss:inventory}.
+
+The CollectionView also has a SortDescription which sorts the list by Name, ExpirationDate or Quantity. The chosen SortDescription can be changed by changing a property called SelectedSortIndex. On the InventoryPage this is currently done with a ComboBox.
+
+The ViewModel also contains commands for removing and adding an ingredient.
+
+\section{Settings}
+The SettingsViewModel has exposes several properties for setting different options for the program.
+
+The integer properties \textit{PersonsInHouseHold} and \textit{ShopAhead} can be adjusted for the current user through databinding.
+
+The property \textit{SelectedStartUpPage} is used for selecting which page the program should display when started. This is the only setting that is not saved in the database, but as a option saved on the device instead, since it is setting for the program and not the user.
+
+The Settings page allows to add ingredients to different lists such as stock and unwanted ingredients, see \cref{ss:settings} for more details.
+The following properties is used to keep track of the selected ingredients when adjusting these settings:
+\begin{itemize}
+	\item BlacklistIngredient SelectedBlackListIngredient
+	\item GraylistIngredient SelectedGreyListIngredient 
+	\item StockQuantity SelectedStockQuantityIngredient
+	\item DietPreset SelectedDietPreset
+	\item int IngredientRatingValue
+\end{itemize}
+
+Most methods in the SettingsViewModel is used for adding and removing ingredients to list, and incrementing or decrementing values.
+
+\chapter{Navigator}
+The MainWindow has a Frame control that shows the content of the different pages. In order to navigate between the different pages and still separate the Views from the ViewModels, we created a special class called Navigator. This is a static class following the singleton pattern. 
+
+When the application starts the Frame control of the MainWindow is tied to the navigator.
+The Navigator can not be instantiated, but Views and ViewModels can access it's static navigation commands. It has a command for navigation to each page. \Cref{lst:InventoryCommand} below shows the GoToInventoryCommand.
+
+\begin{lstlisting}[caption=GoToInventoryCommand, label={lst:InventoryCommand}, language=CSharp]
+public static ICommand GoToInventoryCommand {
+	get {
+		return new RelayCommand(() => Navigator.Navigate(new InventoryPage()));
+	}
+}
+\end{lstlisting}
+
+The public ICommand property GoToInventoryCommand, relays its functionality to the Navigate method by passing a new InventoryPage as parameter.
+
+The Navigate method show in \cref{lst:NavigateMethod} routes the parameter to the NavigationService of the Frame control on MainWindow.
+
+\begin{lstlisting}[caption=Navigate method, label={lst:NavigateMethod}, language=CSharp]
+private static void Navigate(Page page) {
+	NavigationService.Navigate(page);
+}
+\end{lstlisting}
+
+\textit{The above example has been simplified and leaves out null checking, compared to the actual implementation.}
+
+Furthermore the Navigator class also contains a list of all pages in the program corresponding with a title, which is used on the settings page, when choosing a start-up page.
+

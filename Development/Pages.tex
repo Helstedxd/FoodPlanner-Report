@@ -1,7 +1,7 @@
-\section{Pages}
+\chapter{Pages}
 In this section the different pages of the program will be described. \fxnote{skriv?}
 
-\subsection{Settings} \label{ss:settings}
+\section{Settings} \label{ss:settings}
 The settings page allows the user to specify different options for the program. The options are categorized as User Specifics, Stock Management, Rated Ingredients, Unwanted Ingredients and Diets.
 
 Under the \textbf{User Specifics} category, you can change the how many persons that lives in the household, which is used as the default value for how many persons a meal should be scheduled meals. You can also select how many days you want to shop ahead food for, which means how many days in the future the shopping list takes into account. Finally you can select the default page the program shows when started.
@@ -14,22 +14,22 @@ The \textbf{Stock Management} category allow the user to add ingredients that th
 
 \textbf{Diets} allows the user to choose a diet, which will make the search prioritize recipes that... \fxnote{explain}
 
-\subsection{Inventory}
-The inventory page displays a list of the ingredients that the user have in the household. Initially the users sees all the ingredients grouped by name, displaying the total quantity of each ingredient and how many individual ingredients there are. By expanding the ingredient the user can see the individual ingredients and change the quantity and expiration date. \fxnote{bad formulation}
+\section{Inventory} \label{ss:inventory}
+The inventory page displays a list of the ingredients that the user have in the household. Initially the users sees all the ingredients grouped by name, displaying the total quantity of each ingredient and how many individual ingredients there are. By expanding the ingredient with and expander control, the user can see the individual ingredients and change the quantity and expiration date.
 
-In the top the users can add ingredients using an auto-complete control that finds available ingredients from the database. The list is initially sorted by name, but can also be sorted by quantity or expiration date.
+In the top the users can add ingredients using the auto-complete control described in \cref{sec:AutoComplete}, which finds available ingredients from the database. The list is initially sorted by name, but can also be sorted by quantity or expiration date.
 
-\subsection{Shopping List}
+\section{Shopping List}
 The shopping list page shows a list of ingredients that needs to be bought for the recipes in the meal plan for the shop-ahead period mentioned in \cref{ss:settings}. It displays ingredients and the quantity that is missing from the inventory, according to the mealplan and stock management settings. Each ingredient has a check-box so the user can add the selected ingredients directly to the inventory after shopping.
 
-\subsection{Mealplan}
+\section{Mealplan}
 The meal-plan shows a week of scheduled meals, and allows the user to navigate to the previous and next week. The weekdays are listed as rows, with seven individual lists of meals belonging to the specific days. By clicking the meals the  user can navigate to the Recipe Page to see information about the recipe and/or update meal information.
 
-\subsection{Search}
+\section{Search}
 The Search page lists recipes sorted by \fxnote{Describe sorting}.
 In the top it is possible to search for recipes by searching for the recipe name, or comma separated ingredients.
 
-\subsection{Recipe Page}
+\section{Recipe Page}
 The recipe page shows information about a recipe or meal. By clicking a recipe in the search, you navigate to the recipe page which displays the title, image and description of the recipe as well as a list of ingredients. In the top you can add the recipe to the mealplan, and if it is already added you can update the date, or remove it.
 By clicking a meal on the mealplan you are also taken to this page.
 
