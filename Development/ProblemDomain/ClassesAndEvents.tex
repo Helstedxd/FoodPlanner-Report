@@ -1,5 +1,5 @@
 \section{Classes and Events}
-The purpose of this chapter is to select and analyse components from the problem domain. These components is splitted into classes and events.
+The purpose of this chapter is to select and analyse components from the problem domain. These components is split into classes and events.
 
 \subsection{Classes}
 In this section a list of classes will be presented. The classes there is described are those which have been chosen through an class candidate analysis.
@@ -29,7 +29,7 @@ In this section a list of classes will be presented. The classes there is descri
 \subsubsection{Other}
 \begin{itemize}
 \item Achievement
-    \subitem Information about point, progress and criterias. %criterias er stavet rigtigt.
+    \subitem Information about point, progress and criteria.
 \end{itemize}
 
 \subsection{Events}
@@ -51,13 +51,13 @@ In this section a list of events will be presented. The events there is describe
 \subsubsection{Planning}
 \begin{itemize}
     \item Recipe scheduled
-        \subitem Trigger: When a recipe is tied to a date in the foodplan.
+        \subitem Trigger: When a recipe is tied to a date in the meal plan.
     \item Recipe removed
-        \subitem Trigger: When the user removes a recipe which was tied to a date in the foodplan.
+        \subitem Trigger: When the user removes a recipe which was tied to a date in the meal plan.
     \item Shopping list item added
-        \subitem Trigger: When a recipe have been scheduled in the foodplan, the system will check for which food ingredients is needed, and thereafter adds any missing products to the shopping list.
+        \subitem Trigger: When a recipe have been scheduled in the meal plan, the system will check for which food ingredients is needed, and thereafter adds any missing products to the shopping list.
     \item Shopping list created
-        \subitem Trigger: When a foodplan is completed, by which there are no days without a recipe, the shopping list will be locked and considered completed as well.
+        \subitem Trigger: When a meal plan is completed, by which there are no days without a recipe, the shopping list will be locked and considered completed as well.
 \end{itemize}
 
 \subsubsection{Preferences / settings}
@@ -71,46 +71,35 @@ In this section a list of events will be presented. The events there is describe
 \begin{itemize}
 \item Achievement unlocked
     \subitem Trigger: A user has fulfilled the requirements for a achievement.
-%\item Recommended foodplan generated
-%   \subitem Trigger: When the user prompts the system to create a recommendation list.
 \end{itemize}
 
 \subsection{Event Table}
 An event table, on \cref{tab:EventTable},  have been constructed in order to get an overview of the relations between classes and events. The event table allows for a better judgement of which classes are relevant in the program.
 
-%\label{MealClass}
-
-\fxnote{Update event table, or remove achievement and shop (later). Hvorfor er budget overhovedet med på tabellen??}
 \begin{table}
-    \begin{tabular}{|r|c|c|c|c|c|c|}
+    \begin{tabular}{|r|c|c|c|c|}
         \hline
-        ~                                      & Product & Recipe & User & Meal & ~ & ~ \\ \hline
-        \textbf{Consumption}                   & ~       & ~      & ~    & ~    & ~ & ~ \\ 
-        Budget used                            & ~       & ~      & *    & ~    & ~ & ~ \\ 
-        Budget refilled                        & ~       & ~      & *    & ~    & ~ & ~ \\ 
-        Product added                          & +       & ~      & ~    & ~    & ~ & ~ \\ 
-        Product removed                        & +       & ~      & ~    & ~    & ~ & ~ \\ 
-        Product expired                        & *       & ~      & ~    & ~    & ~ & ~ \\ 
-        Product unexpired                      & *       & ~      & ~    & ~    & ~ & ~ \\ 
-        Product quantity changed               & *       & ~      & ~    & ~    & ~ & ~ \\ 
-        Product expiration changed             & *       & ~      & ~    & ~    & ~ & ~ \\ 
-        \textbf{Planning}                      & ~       & ~      & ~    & ~    & ~ & ~ \\ 
-        Shopping list item added               & +       & ~      & ~    & ~    & ~ & ~ \\ 
-        Shopping list completed                & +       & ~      & ~    & ~    & ~ & ~ \\ 
-        Meal added                             & ~       & +      & ~    & +    & ~ & ~ \\ 
-        Meal removed                           & ~       & +      & ~    & +    & ~ & ~ \\ 
-        Meal rescheduled                       & ~       & +      & ~    & +    & ~ & ~ \\ 
-        Meal participants changed              & ~       & ~      & ~    & *    & ~ & ~ \\ 
-        Meal Date changed                      & ~       & ~      & ~    & *    & ~ & ~ \\ 
-        Day passed                             & ~       & ~      & ~    & *    & ~ & ~ \\ 
-        \textbf{Other}                         & ~       & ~      & ~    & ~    & ~ & ~ \\ 
-        Preference changed                     & ~       & ~      & *    & ~    & ~ & ~ \\ 
-        %Achievement unlocked     \vline       & ~       & ~      & ~    & ~    & ~ & X \\ 
-        %Recommended foodplan generated \vline & X       & X      & X    & ~    & ~ & ~ \\ 
-        Recipe found                           & ~       & *      & ~    & ~    & ~ & ~ \\ 
-        ~                                      & ~       & ~      & ~    & ~    & ~ & ~ \\ 
-        ~                                      & ~       & ~      & ~    & ~    & ~ & ~ \\
-        \hline    
+        ~                                      & Product & Recipe & User & Meal\\ \hline
+        \textbf{Consumption}                   & ~       & ~      & ~    & ~   \\ 
+		Product added                          & +       & ~      & ~    & ~   \\ 
+        Product removed                        & +       & ~      & ~    & ~   \\ 
+        Product expired                        & *       & ~      & ~    & ~   \\ 
+        Product unexpired                      & *       & ~      & ~    & ~   \\ 
+        Product quantity changed               & *       & ~      & ~    & ~   \\ 
+        Product expiration changed             & *       & ~      & ~    & ~   \\ 
+        \textbf{Planning}                      & ~       & ~      & ~    & ~   \\ 
+        Shopping list item added               & +       & ~      & ~    & ~   \\ 
+        Shopping list completed                & +       & ~      & ~    & ~   \\ 
+        Meal added                             & ~       & +      & ~    & +   \\ 
+        Meal removed                           & ~       & +      & ~    & +   \\ 
+        Meal rescheduled                       & ~       & +      & ~    & +   \\ 
+        Meal participants changed              & ~       & ~      & ~    & *   \\ 
+        Meal Date changed                      & ~       & ~      & ~    & *   \\ 
+        Day passed                             & ~       & ~      & ~    & *   \\ 
+        \textbf{Other}                         & ~       & ~      & ~    & ~   \\ 
+        Preference changed                     & ~       & ~      & *    & ~   \\ 
+		Recipe found                           & ~       & *      & ~    & ~   \\ 
+		\hline    
     \end{tabular}
     \caption{An event table for the program} 
     \label{tab:EventTable}
