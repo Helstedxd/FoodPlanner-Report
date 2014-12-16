@@ -26,6 +26,8 @@ The \textbf{User} class is primarily used to keep preferences about a user, such
 
 \textbf{BlacklistIngredient} and \textbf{GraylistIngredient} is like \textbf{StockQuantity} used for user preferences. The \textbf{BlacklistIngredient} class contain information about ingredients that the user does not want to appear in a recipe, and \textbf{GreylistIngredient} is used to rate and ingredient to adjust it's impact in the search.
 
-\fxnote{Skriv om DietRule og DietPreset}
+The \textbf{DietPreset} class is used for link the \textbf{DietRules} to the specific diet. This is done by useing the id from the DietPreset and an id from an ingredient and saveing them in the \textbf{DietRule} class. Specifying if the ingredient is either blacklisted or graylisted is needed. Only if the item is graylisted is the ingredient value should be set. 
 
-\fxnote{explain why similar classes does not inherit or relate}
+
+
+

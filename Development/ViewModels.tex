@@ -18,8 +18,7 @@ The MealPlanViewModel has a DateTime property called ActiveDate, that is used to
 
 It also has a collection of Meal's for each day in the week. The collections contains the meals that belongs to the different weekdays according to the active date.
 
-These meals are added to the collection when changing the ActiveDate property?
-\fxnote{Describe this}
+When changing the ActiveDate property, a method called \textbf{ShowMeals} is called. This method runs a query which gathers the scheduled meals for the choosen week, and and add them to the desired collection, to be displayed. 
 
 \subsection{Methods}
 When clicking the arrow buttons to navigate between weeks, the button invokes a command, either NextWeek or PreviousWeek, which changes the ActiveDate property, and updates the Meal collections.
