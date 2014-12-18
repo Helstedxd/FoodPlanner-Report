@@ -1,0 +1,10 @@
+\chapter{Custom User Controls}
+
+\section{Ingredient Auto Completion} \label{sec:AutoComplete}
+Since it is only allowed to use ingredients which already exists in the database, there has to be a way of getting these ingredients when the user wants to add them in different situations.
+
+The IngredientAutoComplete is a UserControl that searches through ingredients in the database, based on what a user types into a search field. It will then list the most relevant beneath the search field and allow the user to click one.
+
+It exposes the DepencyProperties; MaximumItems and SelectItemCommand, which can be used to set how many items the list should display, and which command should be executed when the user selects an ingredient. This is set on the pages that uses this control.
+
+When SearchText property changes, the control will try to repopulate the list of found ingredients. If a previous search with less letters came up with fewer ingredients than the maximum, the control will not attempt to query the database again, since that could not possibly give more results.

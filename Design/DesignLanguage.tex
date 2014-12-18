@@ -1,24 +1,24 @@
 \subsection{Design Language} \label{DesignLanguage}
 This section will present the result of the physical design process which is the design language. It will start so by defining each screen of the program and the  functions that each screen should have. Afterwards it will explain the navigation method that is used in the program's design and end with some general principles for designing the program's interface.
 
-\subsubsection{Program Screens and Functionality} \label{ScreensandFunctionality}
+\subsubsection{Program screens and functionality} \label{ScreensandFunctionality}
 The domains were identified in \cref{ScenarioCorpus} and they are as follows: planning, shopping, recipes, inventory and general. In \nameref{Sketches} the domains were used to structure the screens in the program. In the \nameref{ConsMod} some of the domains were used as main elements, because of the structural contribution that the domains give, they will be used as a basis for the actual screens of the program. The following text will describe each screen of the program by the funcionalities of the particular screen.
 
-\paragraph{Planning}
+\textbf{Planning:}
 By first looking at the \nameref{ConsMod} we see that there are some functional requirements stated for the Meal Planner:
 
 \begin{itemize}
 \item Recipes planned for a dynamic number of people.
 \item Varied meals.
-\item Change meal Plans on the fly.
+\item Change meal plans on the fly.
 \end{itemize}  
 
-By also looking at the \nameref{Sketches} \cref{MealScheduleSketches}, we can add these requirements to the list:
+By also looking at the \nameref{Sketches} in \cref{MealScheduleSketches}, we can add these requirements to the list:
 
 \begin{itemize}
 	\item A weekly overview of planned meals.
 		\begin{itemize}
-			\item With information  for each meal e.g. name of the recipe,the date for the cooking, and the number of ingredients the user has.
+			\item With information for each meal e.g. name of the recipe, the date for the cooking, and the number of ingredients the user has.
 		\end{itemize}
 	\item A view of a specific day and the planned recipes.
 		\begin{itemize}
@@ -28,7 +28,7 @@ By also looking at the \nameref{Sketches} \cref{MealScheduleSketches}, we can ad
 		\end{itemize}  
 \end{itemize} 
 
-\paragraph{Shopping}
+\textbf{Shopping:}
 By also looking at the \nameref{ConsMod} for this screen we can identify different functional requirements:
 
 \begin{itemize}
@@ -38,7 +38,7 @@ By also looking at the \nameref{ConsMod} for this screen we can identify differe
 	\item Meal plan changes effects the shopping list.
 \end{itemize} 
 
-By also looking at the \nameref{Sketches} \cref{ShoppingListSketches}, we can add these requirements to the list:
+By also looking at the \nameref{Sketches} in \cref{ShoppingListSketches}, we can add these requirements to the list:
 
 \begin{itemize}
 	\item An overview of all ingredients on the shopping list.
@@ -49,7 +49,7 @@ By also looking at the \nameref{Sketches} \cref{ShoppingListSketches}, we can ad
 	\item A function to buy or add ingredients to the inventory.	
 \end{itemize}
 
-\paragraph{Recipes}
+\textbf{Recipes:}
 The \nameref{ConsMod} also states different functional requirements for this screen:
 
 \begin{itemize}
@@ -64,7 +64,7 @@ The \nameref{ConsMod} also states different functional requirements for this scr
 	\item Diets
 \end{itemize} 
 
-The list can be expanded with the functional requirement from \nameref{Sketches} \cref{RecipesSketches}:
+The list can be expanded with the functional requirement from \nameref{Sketches} in \cref{RecipesSketches}:
 
 \begin{itemize}
 	\item A search function.
@@ -72,7 +72,7 @@ The list can be expanded with the functional requirement from \nameref{Sketches}
 		\begin{itemize}
 			\item Information could be a picture of the recipe, recipe name, ingredients of the recipe and the number of ingredients the user has.
 		\end{itemize}
-	\item A categorization function
+	\item A categorisation function
 	\item A view of a specific recipe.
 		\begin{itemize}
 			\item Information such as preparation guide, ingredients and a picture.
@@ -80,7 +80,7 @@ The list can be expanded with the functional requirement from \nameref{Sketches}
 		\end{itemize}
 \end{itemize}
 
-\paragraph{Inventory}
+\textbf{Inventory:}
 The \nameref{ConsMod} can also be used to state different functionality requirements for the inventory screen:
 
 \begin{itemize}
@@ -88,58 +88,58 @@ The \nameref{ConsMod} can also be used to state different functionality requirem
 	\item Automatic adding of bought shopping list ingredients.
 \end{itemize}
 
-The additions to the functional requirements from \nameref{Sketches} \cref{RecipesSketches} are listed below:
+The additions to the functional requirements from \nameref{Sketches} in \cref{RecipesSketches} are listed below:
 
 \begin{itemize}
 	\item A search function to find and add specific ingredients.
 	\item A function to remove ingredients.
 	\item A list of ingredients with little but relevant information.
 		\begin{itemize}
-			\item Information such as Ingredient name, purchase date and quantity.
+			\item Information such as ingredient name, purchase date and quantity.
 		\end{itemize}
 	\item A function or view that easily groups ingredients of the same name but with different quantities and/ or purchase dates.
 \end{itemize}  
 
-\paragraph{General}   
+\textbf{General:}   
 The \nameref{ConsMod} does not include this domain and the design requirements will therefore solely be identified from the \nameref{Sketches}:
 
 \begin{itemize}
 	\item An overview of all the different setting categories.
 		\begin{itemize}
-			\item Categories such as Stock, allergies, preferences and more.
+			\item Categories such as stock, allergies, preferences and more.
 		\end{itemize}
 	\item A function to expand and display specific categories and the information for that category.
 \end{itemize} 
  
-\subsubsection{Program Navigation}
+\subsubsection{Program navigation}
 The main method of the navigation in the program is done via the bottom navigation bar shown on \cref{NavigationBarSketch}. This bar can be used from all the screens of the program and directs the user to one of the five main screens written prior in this section, in \textit{Program Screens and Functionality}. If the user navigates away from one of the main screens, e.g. when viewing a list of recipe, the user can press a recipe and view that specific recipe, the top of the screen will then include a back functionality. 
 
-\subsubsection{Design Principles}
+\subsubsection{Design principles}
 This section will discuss different design subjects that are used as general principles in the design language for the program. These general principles are created, to give the program's design coherence and thereby increase the usability.
 
-\paragraph{Navigation}
-The navigation in the program is mainly done via the bottom navigation bar. Consistently displaying and using this as the main way of navigation gives the program better usability. If the user is confused as to where he is in the program he can always use the bottom navigation bar to find his way to a screen that is familiar. Another consistency that the programs navigation has is the use of the top navigation bar. When the user is on any screen that is not one of the main screens the top bar will be used as a backwards navigation. The consistency of using both the bottom and top for navigation functions gives an easy of use and better usability.
+\textbf{Navigation:}
+The navigation in the program is mainly done via the bottom navigation bar. Consistently displaying and using this as the main way of navigation gives the program better usability. If the user is confused as to where he is in the program he can always use the bottom navigation bar to find his way to a screen that is familiar. Another consistency that the program's navigation has is the use of the top navigation bar. When the user is on any screen that is not one of the main screens the top bar will be used as a backwards navigation. The consistency of using both the bottom and top for navigation functions gives an easy of use and better usability.
 
-\paragraph{Mobile application}
+\textbf{Mobile application:}
 The program will be designed as a mobile application. It is therefore important that this is considered when defining more general principles for the program. These additional principles are listed and briefly described below.
 
 \begin{itemize}
 	\item General
 		\begin{itemize}
 			\item Try to avoid to much redundant information on the screen
-			\item Avoid to many click function and mouseover functions.
+			\item Avoid many click and mouseover events.
 		\end{itemize}
 	\item Text
 		\begin{itemize}
 			\item The text has to be readable. That means using logical typography e.g. giving it the right size relative to the screen and an easy to read font.	
-			\item the use of font and text size has to be consistent.
+			\item The use of font and text size has to be consistent.
 		\end{itemize}
 	\item Buttons
 		\begin{itemize}
-			\item The shape and color theme has to be consistent on buttons.
-			\item The size of the buttons has to be larger enough for a person to click with a finger.
+			\item The shape and colour theme has to be consistent on buttons.
+			\item The size of the buttons has to be large enough for a person to click with a finger.
 			\item Avoid to much text on the buttons. A good idea is to use icons.
-			\item Avoid using buttons when it is not necessary e.g. When editing an ingredient the program should update automatically.
+			\item Avoid using buttons when it is not necessary e.g. when editing an ingredient the program should update automatically.
 		\end{itemize}
 \end{itemize}    
 

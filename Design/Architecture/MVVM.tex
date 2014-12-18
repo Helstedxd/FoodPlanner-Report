@@ -1,4 +1,4 @@
-\section{Model View ViewModel}\label{MVVMSection}
+\chapter{Model View ViewModel (MVVM)}\label{MVVMSection}
 To separate and organize the application we are using the MVVM-Pattern.
 
 The MVVM pattern is divided into 3 areas:
@@ -14,7 +14,7 @@ The View classes does not know that the model exists, while the ViewModel does n
 
 The MVVM is well suited for the WPF platform, since WPF has been designed around the mvvm pattern.
 
-\subsection{Data binding}
+\section{Data binding}
 Synchronizing the View with the ViewModel happens automatically through data binding.
 The view binds to properties in the ViewModel, which in turn exposes data from the Model. In fact there is no need to write any code in the ViewModel that updates the view.
 
@@ -25,7 +25,7 @@ When a user clicks a button on the view, a command in the ViewModel executes the
 
 The separation between the View and ViewModel makes ViewModel classes easy to unit test. Just like the View, unit tests are just another type of ViewModel consumer\Cref{mvvm}.
 
-\subsection{Relaying command logic}
+\section{Relaying command logic}
 \fxnote{this is not fully written.}
 In order to relay commands to private methods...
 
