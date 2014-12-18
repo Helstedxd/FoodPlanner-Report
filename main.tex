@@ -106,15 +106,14 @@
 
 \newcommand*{\blankpage}{%
 \vspace*{\fill}
-\centering \textit{This page intentionally left (almost) blank.}
 \vspace{\fill}}
 
 \pagestyle{fancy}
 
 \title{
     \vspace*{-3cm}
-    \fontsize{50}{48} \textbf{Titel TBA}\\
-    \fontsize{20}{48}\emph{A software analysis and -implementation}
+    \fontsize{50}{48} \textbf{Meal Planner}\\
+    \fontsize{20}{48}\emph{A software analysis and implementation}
 }
 \author{
     \noindent\makebox[\textwidth]{%
@@ -167,7 +166,7 @@
     %\pagenumbering{roman}
     \input{Indledning/Forord}
         \thispagestyle{empty}
-    %\renewcommand*\contentsname{Indholdsfortegnelse}
+    \renewcommand*\contentsname{Table of Contents}
     \newpage
         {\pagestyle{empty}
     \tableofcontents
@@ -177,10 +176,10 @@
     \setcounter{page}{1}
     \pagestyle{plain}
     
-    \part{Introduction}
+    \part*{Introduction}
 	\input{Indledning/Introduction}
 
-    \part{Problem Analysis}
+    \part{Problem Analysis} \label{part:ProbAnal}
     	\input{Analysis/Analysis}
 
 	\part{Design}
