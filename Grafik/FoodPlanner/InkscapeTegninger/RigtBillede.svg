@@ -24,10 +24,10 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.8284272"
-     inkscape:cx="591.83066"
-     inkscape:cy="670.70685"
-     inkscape:current-layer="g3580"
+     inkscape:zoom="1"
+     inkscape:cx="329.57005"
+     inkscape:cy="374.09289"
+     inkscape:current-layer="g4947"
      id="namedview4942"
      showgrid="false"
      inkscape:window-width="1920"
@@ -2174,7 +2174,7 @@
              x="886"
              y="473.09448" /></flowRegion><flowPara
            id="flowPara4742"
-           style="font-size:16px">&quot;Unedible&quot; products are discarded</flowPara></flowRoot>      <flowRoot
+           style="font-size:16px">Unedible products are discarded</flowPara></flowRoot>      <flowRoot
          xml:space="preserve"
          id="flowRoot4752"
          style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Sans;font-style:normal;font-weight:normal;font-size:16px;line-height:125%;letter-spacing:0px;word-spacing:0px;-inkscape-font-specification:Sans"><flowRegion
@@ -2970,7 +2970,7 @@
              x="393"
              y="231.09448" /></flowRegion><flowPara
            id="flowPara3596"
-           style="font-size:16px">Choices added to the foodplan</flowPara></flowRoot>      <g
+           style="font-size:16px">Choices added to the meal plan</flowPara></flowRoot>      <g
          id="g3557"
          transform="translate(284.76909,0.36239691)">
         <g
