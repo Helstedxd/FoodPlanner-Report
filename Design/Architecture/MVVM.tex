@@ -12,9 +12,9 @@ The MVVM pattern is divided into 3 areas:
 The pattern has a very loosely coupled design.
 The View classes does not know that the model exists, while the ViewModel does not know about the view. The Model does not now know the existence and View and ViewModel.
 
-The MVVM is well suited for the WPF platform, since WPF has been designed around the mvvm pattern.
+The MVVM is well suited for the WPF platform, since WPF has been designed around the MVVM pattern.
 
-\section{Data binding}
+\section{Data Binding}
 Synchronizing the View with the ViewModel happens automatically through data binding.
 The view binds to properties in the ViewModel, which in turn exposes data from the Model. In fact there is no need to write any code in the ViewModel that updates the view.
 
@@ -23,16 +23,12 @@ The views datacontext is bound to the ViewModel, which makes it easy to bind and
 When a property changes, the new value automatically propagates to the view through databinding.
 When a user clicks a button on the view, a command in the ViewModel executes the requested action.
 
-The separation between the View and ViewModel makes ViewModel classes easy to unit test. Just like the View, unit tests are just another type of ViewModel consumer\Cref{mvvm}.
+The separation between the View and ViewModel makes ViewModel classes easy to unit test. Just like the View, unit tests are just another type of ViewModel consumer.\cite{mvvm}
 
-\section{Relaying command logic}
-\fxnote{this is not fully written.}
-In order to relay commands to private methods...
+\section{Relaying Command Logic}
+In order to relay commands to private methods, a specialised class called RelayCommand is used. It defines methods for routing commands and command parameters to ordinary methods, which allows the use of binding commands in the view, while still exposing methods in the ViewModel for testing.
 
-Updating (INotifyPropertychanged)
+\section{Notify Views About Property Changes}
+All the ViewModels inherits from the ObservableObject class, which implements the INotifyPropertyChanged interface, that makes it possible to notify the view about property changes, which makes it possible to automatically update the View using databinding.
 
-ObservableObject 
-
-All the viewmodels inherits from the ObservableObject class, which implements the INotifyPropertyChanged interface, that makes it possible to notify the view about propertychanges
-
-We use a simple library called MVVMFoundation that implements these general purpose ObservableObject / RelayCommand.
+A simple library called MVVMFoundation\cite{mvvmF}, that a.o. implements the general purpose ObservableObject and RelayCommand, was used in the solution since this functionality is very common when working with MVVM in the WPF environment.
