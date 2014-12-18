@@ -66,7 +66,7 @@ public DietPreset 					SelectedDietPreset { get; set; }
 
 Most methods in the SettingsViewModel are used for adding and removing ingredients to list, and incrementing or decrementing values.
 
-\chapter{Navigator}
+\chapter{Navigator} \label{NavigatorLabel}
 The MainWindow has a Frame control that shows the content of the different pages. In order to navigate between the different pages and still separate the Views from the ViewModels, a special class called Navigator was created. This is a static class following the singleton pattern. 
 
 When the application starts the Frame control of the MainWindow is tied to the Navigator class.
