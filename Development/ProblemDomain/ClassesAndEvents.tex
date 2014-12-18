@@ -1,87 +1,53 @@
-\section{Classes and Events}
-The purpose of this chapter is to select and analyse components from the problem domain. These components is split into classes and events.
+\section{Classes}
+In this section a list of classes will be presented. The classes described are those which have been chosen through a class candidate analysis.
 
-\subsection{Classes}
-In this section a list of classes will be presented. The classes there is described are those which have been chosen through an class candidate analysis.
-
-\subsubsection{Physical}
+\subsection{Physical}
 \begin{itemize}
-\item Product
-    \subitem This class is used to identify different food products for the recipes with information such as food type and expiration date. This class is essential for the program and will be used frequently.
-\item Recipe
-    \subitem This class holds information about the food ingredients and instructions on how to cook the meal.
-\item Scheduled Meal
-    \subitem This class contains information about a recipe and when it is scheduled to be cooked.
+\item \textbf{Product:} This class is used to identify different ingredients for the recipes with information such as food type and expiration date. This class is essential for the program and will be used frequently.
+\item \textbf{Recipe:} This class holds information about the ingredients and instructions on how to cook the meal.
+\item \textbf{Scheduled Meal:} This class contains information about a recipe and when it is scheduled to be cooked.
 \end{itemize}
 
-\subsubsection{Persons}
+\subsection{Persons}
 \begin{itemize}
-\item User
-    \subitem This class contains information about the preferences of a specific user, and will allow the solution to synchronize/share data with other users or devices.
+\item \textbf{User:} This class contains information about the preferences of a specific user, and will allow the solution to synchronise/share data with other users or devices.
 \end{itemize}
 
-\subsubsection{Places}
+\subsection{Places}
 \begin{itemize}
-\item Shop
-    \subitem This class holds information about the location of specific groceries and sales.
+\item \textbf{Shop:} This class holds information about the location of specific groceries and discounts.
 \end{itemize}
 
-\subsubsection{Other}
+\section{Events}
+In this section a list of events will be presented. The events described are those which have been chosen through an event candidate analysis. The events and what trigger them are listed below.
+\subsection{Consumption}
 \begin{itemize}
-\item Achievement
-    \subitem Information about point, progress and criteria.
+\item \textbf{Product bought:} A shopping list have been completed. The items bought will be added to an inventory.
+\item \textbf{Product removed:} A meal have been prepared and the product should be removed from the inventory, or have an subtraction from its original volume/quantity.
+\item \textbf{Product expired:} When a product reaches its expiration date, it should be removed from the inventory and thrown out.
 \end{itemize}
 
-\subsection{Events}
-In this section a list of events will be presented. The events there is described are those which have been chosen trough an event candidate analysis.
-\subsubsection{Consumption}
+\subsection{Planning}
 \begin{itemize}
-\item Budget used
-    \subitem Trigger: The balance have been changed as products have been bought.
-\item Budget refilled
-    \subitem Trigger: The user sets a new weekly/monthly balance, or reaches a new time period.
-\item Product bought
-    \subitem Trigger: A shopping list have been completed. The items bought will be added to an inventory.
-\item Product removed
-    \subitem Trigger: A meal have been prepared and the product should be removed form the inventory, or have an subtraction from its original volume/quantity.
-\item Product expired
-    \subitem Trigger: When a product reaches its expiration date it should be thrashed" and removed from the inventory.
+    \item \textbf{Recipe scheduled:} When a recipe is scheduled for a date in the meal plan.
+    \item \textbf{Recipe removed:} When the user removes a recipe which was scheduled for a date in the meal plan.
+    \item \textbf{Shopping list item added:} When a recipe have been scheduled in the meal plan, missing ingredients from the inventory are added to the shopping list.
 \end{itemize}
 
-\subsubsection{Planning}
+\subsection{Preferences/settings}
 \begin{itemize}
-    \item Recipe scheduled
-        \subitem Trigger: When a recipe is tied to a date in the meal plan.
-    \item Recipe removed
-        \subitem Trigger: When the user removes a recipe which was tied to a date in the meal plan.
-    \item Shopping list item added
-        \subitem Trigger: When a recipe have been scheduled in the meal plan, the system will check for which food ingredients is needed, and thereafter adds any missing products to the shopping list.
-    \item Shopping list created
-        \subitem Trigger: When a meal plan is completed, by which there are no days without a recipe, the shopping list will be locked and considered completed as well.
+\item \textbf{Preference changed:} When the user navigates to a settings menu to exclude products from the system, due to allergies, diets or preference.
 \end{itemize}
 
-\subsubsection{Preferences / settings}
-\begin{itemize}
-\item Preference changed
-    \subitem Trigger: When the user goes to a settings menu to ban products from the system, due to allergies, diets or preference.
-\end{itemize}
+\section{Event Table}
+\Cref{tab:EventTable} shows an event table that have been constructed in order to get an overview of the relations between classes and events. The event table allows for a better judgement of which classes are relevant in the program. A plus (+) in the table indicates, that an event can occur zero or one time, whereas a star (*) indicates that an event can occur zero or more times.
 
-
-\subsubsection{Other}
-\begin{itemize}
-\item Achievement unlocked
-    \subitem Trigger: A user has fulfilled the requirements for a achievement.
-\end{itemize}
-
-\subsection{Event Table}
-An event table, on \cref{tab:EventTable},  have been constructed in order to get an overview of the relations between classes and events. The event table allows for a better judgement of which classes are relevant in the program.
-
-\begin{table}
+\begin{table}[H]\centering
     \begin{tabular}{|r|c|c|c|c|}
         \hline
         ~                                      & Product & Recipe & User & Meal\\ \hline
         \textbf{Consumption}                   & ~       & ~      & ~    & ~   \\ 
-		Product added                          & +       & ~      & ~    & ~   \\ 
+		    Product added                          & +       & ~      & ~    & ~   \\ 
         Product removed                        & +       & ~      & ~    & ~   \\ 
         Product expired                        & *       & ~      & ~    & ~   \\ 
         Product unexpired                      & *       & ~      & ~    & ~   \\ 
@@ -89,16 +55,14 @@ An event table, on \cref{tab:EventTable},  have been constructed in order to get
         Product expiration changed             & *       & ~      & ~    & ~   \\ 
         \textbf{Planning}                      & ~       & ~      & ~    & ~   \\ 
         Shopping list item added               & +       & ~      & ~    & ~   \\ 
-        Shopping list completed                & +       & ~      & ~    & ~   \\ 
         Meal added                             & ~       & +      & ~    & +   \\ 
         Meal removed                           & ~       & +      & ~    & +   \\ 
         Meal rescheduled                       & ~       & +      & ~    & +   \\ 
         Meal participants changed              & ~       & ~      & ~    & *   \\ 
         Meal Date changed                      & ~       & ~      & ~    & *   \\ 
-        Day passed                             & ~       & ~      & ~    & *   \\ 
         \textbf{Other}                         & ~       & ~      & ~    & ~   \\ 
         Preference changed                     & ~       & ~      & *    & ~   \\ 
-		Recipe found                           & ~       & *      & ~    & ~   \\ 
+		    Recipe found                           & ~       & *      & ~    & ~   \\ 
 		\hline    
     \end{tabular}
     \caption{An event table for the program} 

@@ -1,13 +1,13 @@
 \section{Structure}
-In this section we will be describing the overall structure of the program, through class diagrams.
+In this section the overall structure of the system will be described using class diagrams.
 
-\subsection{Individual class description}
-In this subsection the different classes will be described with a short text.
+\subsection{Class Descriptions}
+The behaviour of different classes will be described below.
 
 \begin{figure}[tbhp]
 	\centering
 	\includegraphics[clip=true, trim=0.5cm 4cm 18.5cm 0.5cm,  ]{Development/ProblemDomain/FoodClass.pdf}
-	\caption{Class diagram for the food class} \label{FoodClass}
+	\caption{Behavior diagram for the food class} \label{FoodClass}
 \end{figure}
 The \textbf{Food} class contains information about the quantity and expiration date of a food item. The food items can be found in the lists inventory or shopping list.
 
@@ -32,15 +32,15 @@ The \textbf{User settings} class contains preferences from the user which the sy
 	\end{figure}
 \textbf{Recipes} consists of \textbf{Food}. It also contains information on how to prepare the meal from the recipe.
 
-\subsection{Class diagram description}
-The class diagram is structured with \textbf{Food} as the central class. 
+\subsection{Class Diagram}
+The class diagram is structured with \textit{Food} as the central class. 
 \textit{Shopping List}, \textit{Inventory} and \textit{Foodplan} are lists, containing \textit{Food} or \textit{Meal}.
 
-Food objects can be part of a \textbf{Shopping List}, a user \textbf{Inventory}, or be part of a \textbf{Recipe}, seen as aggregation on \Cref{fig:classDiagram}. A \textbf{Recipe} contains 1 to many Food objects, and is part of a \textbf{Meal} that in turn is part of a \textbf{Foodplan}. A \textit{Meal} contains exactly 1 recipe, while the \textit{Foodplan} can have any number of planned \textit{Meals}.
+Food objects can be part of a \textit{Shopping List}, a user \textit{Inventory}, or a \textit{Recipe}, seen as aggregation on \cref{fig:classDiagram}. A \textit{Recipe} contains one to many Food objects, and is part of a \textit{Meal} that in turn is part of a \textit{Foodplan}. A \textit{Meal} contains exactly one recipe, while the \textit{Foodplan} can have any number of planned \textit{Meals}.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.50\textwidth]{Grafik/FoodPlanner/FoodPlannerClassDiagram.png}
+	\includegraphics[clip=true, width=1\textwidth, trim=1cm 3cm 4cm 0]{Development/Klasseting}
 	\caption{Relation between classes.}
 	\label{fig:classDiagram}
 \end{figure}
