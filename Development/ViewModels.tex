@@ -1,19 +1,18 @@
-\chapter{ViewModels}
+\section{ViewModels}
 All pages have a corresponding ViewModel which it is binding its data-context to. Whenever data changes, the View will be notified and the ViewModel will receive input from the view.
 
-\section{Meal Plan}
-
+\subsection{Meal Plan}
 The MealPlanViewModel has a DateTime property called ActiveDate, that is used to reference which week the user wants to look through meals. It has seven other DateTime properties which references the individual days in the week. When ActiveDate is being set, it updates the MondayDate property, which is used by the remaining properties as reference.
 
 It also has a collection of Meals for each day in the week. The collections contains the meals that belongs to the different weekdays according to the ActiveDate.
 
 When changing the ActiveDate property, a method called \textbf{ShowMeals} is called. This method runs a query which gathers the scheduled meals for the choosen week, and and add them to the desired collection, to be displayed. 
 
-\subsection{Methods}
+\subsubsection{Methods}
 When clicking the arrow buttons to navigate between weeks, the button invokes a command, either NextWeek or PreviousWeek, which changes the ActiveDate property, and updates the Meal collections.
 
 
-\section{Recipe}
+\subsection{Recipe}
 
 The RecipeViewModel has a Recipe and a Meal property which are set on initialization.
 \begin{lstlisting}[caption=Recipe ViewModel Constructors., language=CSharp]
@@ -28,7 +27,7 @@ The ViewModel has the commands AddUpdateMealCommand and RemoveMealCommand. The A
 The RemoveMealCommand removes the meal from the mealplan, the button that invokes this command is only visible when the Meal property is set.
 
 
-\section{Inventory}
+\subsection{Inventory}
 The InventoryViewModel has a property called InventoryIngredients which is a collection of all the food that the user has in the inventory.
 
 The CollectionView of InventoryIngredients is given a PropertyGroupDescription which groups all ingredients with the same name as one item. The name and total quantity can then be displayed on the page, while the individual ingredients can be expanded as well, as described in \cref{ss:inventory}.
@@ -37,7 +36,7 @@ The CollectionView also has a SortDescription which sorts the list by Name, Expi
 
 The ViewModel also contains commands for removing and adding an ingredient.
 
-\section{Settings}
+\subsection{Settings}
 The SettingsViewModel exposes several properties for setting different options for the program.
 
 The integer properties \textit{PersonsInHouseHold} and \textit{ShopAhead} can be adjusted for the current user through databinding.
@@ -55,7 +54,7 @@ public DietPreset 					SelectedDietPreset { get; set; }
 
 Most methods in the SettingsViewModel are used for adding and removing ingredients to list, and incrementing or decrementing values.
 
-\chapter{Navigator} \label{NavigatorLabel}
+\section{Navigator} \label{NavigatorLabel}
 The MainWindow has a Frame control that shows the content of the different pages. In order to navigate between the different pages and still separate the Views from the ViewModels, a special class called Navigator was created. This is a static class following the singleton pattern. 
 
 When the application starts the Frame control of the MainWindow is tied to the Navigator class.

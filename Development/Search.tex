@@ -1,35 +1,35 @@
-\chapter{Search}\label{chp:PublicQuerys}
+\section{Search}\label{chp:PublicQuerys}
 The search functionality is implemented in a class called PublicQueries, which is a collection of queries that can be used to get information from the database. It is also the brain behind the search and sorting.
 The fields will be described as they are used several places in the application, so they will be described here.
 
-\section{Fields}
+\subsection{Fields}
 This section describes the fields used in the solution.
-\subsection{inventoryIQueryable and inventoryList}
+\subsubsection{inventoryIQueryable and inventoryList}
 The fields inventoryIQueryable and inventoryList are used to get all the ingredients in the users inventory. This is used in the search a.o.
 
 The fields get the user's inventory and since the inventory can contain multiple of the same item, where the expiration date is different from each item.
 
 Since the program does not remove an ingredient if it gets too old the application can ignore expiration date and group the ingredients into one and combine the sum. The only difference between inventoryIQueryable and inventoryList is that inventoryList is made into an list so it can be used inside another query without having another datareader open.
 
-\subsection{ingredientsFromLastMeals}
+\subsubsection{ingredientsFromLastMeals}
 This field gets all the user's previous meals and get the ingredients from them. Then group the ingredients into the class LastMeal where the ingredientCount is the number of times the ingredient has been used previously.
 
-\subsection{blackList} \label{ssc:blacklist}
+\subsubsection{blackList} \label{ssc:blacklist}
 
 This field retrieves all the blacklisted ingredients from the specific user, and then finds all the recipes where at least one of the blacklisted ingredients is used.
 
 The field selects the IDs of the found recipes to the field. Duplicates are ignored because the outcome does not change if a recipe is ignored multiple times.
 
-\subsection{grayList}\label{ssc:graylist}
+\subsubsection{grayList}\label{ssc:graylist}
 This field retrieves all the graylisted ingredients. The graylist is essentially a rating system for ingredients where the greater a value the ingredient has, the greater priority a recipe with the ingredient has.
 
 When the grayList is used, only the first of the specific grayList ingredient is used from the list, the list needs to be grouped by ingredient. But the value of the specific grayList ingredient cannot exceed the max value of 100, so if a duplicate ingredient occurs, which can happen if a diet is set, the grouping needs to handle it. 
 
 This is done by dividing the sum of the ingredient value with the number of time the ingredient is found. 
 
-\section{Methods}
+\subsection{Methods}
 This section describes the methods used in the solution.
-\subsection{Search}
+\subsubsection{Search}
 This method takes a list of integers as parameter input, the integers are IDs that is associated with the recipes, then the method finds all the ingredients which are associated with the found recipes. Then the ingredient IDs are grouped in an IQueryable so the recipes have all the ingredients connected.
 
 \begin{lstlisting}[caption=ResultGrouping, label={lst:ResultGrouping}, language=CSharp]
@@ -41,7 +41,7 @@ group new Result()
 } by ri.RecipeID;
 \end{lstlisting}
 
-\subsection{addValuesToSearch}
+\subsubsection{addValuesToSearch}
 This method adds a value to the search results and sorts the list.
 
 The parameter input of the method is an IQueryable, and a list of strings which is initialized to null.
