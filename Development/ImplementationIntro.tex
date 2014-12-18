@@ -1,4 +1,4 @@
-\chapter{Program Implementation}
+\chapter{Implementation}
 In this chapter the implementation of the program will be described. The code of the program has been structured using the MVVM pattern described in \cref{MVVMSection}, which means that the program logic is divided into Models, ViewModels and Views. The Models are the classes that were defined in the design phase in \cref{ClassesLabel}, but the structure has been changed to make it easier to support the chosen database system.
 Every page in the program has a corresponding ViewModel, responsible for providing logic for reading and writing data from and to the models, which in turn updates the database through Entity Framework described in \cref{EntityFrameworkSection}.
 A big part of the program consists in searching for different objects in the database, such as ingredients and recipes, while also taking different variables into account, such as a user's planned meals, inventory and specific preferences. This will be describes in the last part of this chapter.
