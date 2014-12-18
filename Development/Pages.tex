@@ -1,35 +1,35 @@
 \chapter{Pages}
-In this section the different pages of the program will be described. The functionality of the pages will be described, and what the pages consist of. If the page have different areas with different functionality, these will be described as well.
+In this section the documentation and functionality of the different pages will be described, as they are implemented in the program.
 
 \section{Settings} \label{ss:settings}
 The settings page allows the user to specify different options for the program. The options are categorized as User Specifics, Stock Management, Rated Ingredients, Unwanted Ingredients and Diets.
 
-Under the \textbf{User Specifics} category, you can change the how many persons that lives in the household, which is used as the default value for how many persons a meal should be scheduled meals. You can also select how many days you want to shop ahead food for, which means how many days in the future the shopping list takes into account. Finally you can select the default page the program shows when started.
+Under the \textbf{User Specifics} category, you can change the how many persons that lives in the household, which is used as the default value for how many persons a meal should be scheduled for. You can also select how many days you want to shop ahead for, which means how many days in the future the shopping list takes into account. Finally you can select the default page, which the program shows when started.
 
-The \textbf{Stock Management} category allow the user to add ingredients that they always want to have a specific quantity of. By typing the ingredient into a textbox with auto-completion the user can select the ingredient. In the stock list the added stock ingredients are shown and the quantity can be changed by using numeric up-down control. The ingredient can be removed by selecting them and clicking the remove button symbolized with a minus (-) sign.
+The \textbf{Stock Management} category allows the user to add ingredients that they always want to have a specific quantity of. By typing the ingredient into a textbox with auto-completion as described in \cref{sec:AutoComplete} the user can select the ingredient. In the stock list the added stock ingredients are shown and the quantity can be changed by using numeric up-down control. The ingredient can be removed by selecting them and clicking the remove button symbolized with a minus (-) sign.
 
-\textbf{Rated Ingredients} works the same way as \textbf{Stock Management} when adding an ingredient, but instead of setting a quantity, the user can give the ingredient a rating from 1-100 in order to prioritize the search. The user can also delete the ingredients from the rated ingredients list.
+\textbf{Rated Ingredients} works the same way as \textbf{Stock Management} when adding an ingredient, but instead of setting a quantity, the user can give the ingredient a rating from 1-100 in order to prioritize the search, as described in \cref{ssc:graylist}. The user can also remove the ingredients from the rated ingredients list.
 
-\textbf{Unwanted Ingredients} is similar to \textbf{Rated Ingredients} but the ingredients you add will instead be "blacklisted" and thus completely remove recipes with these ingredients from the search.
+\textbf{Unwanted Ingredients} is similar to \textbf{Rated Ingredients} but the ingredients you add will instead be "blacklisted", as described in \cref{ssc:blacklist}, and thus completely remove recipes with these ingredients from the search.
 
 \textbf{Diets} allows the user to choose a diet, which will make the search prioritize recipes that does not contain specific ingredients, so the user can keep a specific diet. The diets are pre set and can not be changed by the user.
 
 \section{Inventory} \label{ss:inventory}
-The inventory page displays a list of the ingredients that the user have in the household. Initially the users sees all the ingredients grouped by name, displaying the total quantity of each ingredient and how many individual ingredients there are. By expanding the ingredient with and expander control, the user can see the individual ingredients and change the quantity and expiration date.
+The inventory page displays a list of the ingredients that the user have in the household. Initially the users sees all the ingredients from the inventory grouped by name, displaying the total quantity of each ingredient and how many individual ingredients there are. By expanding an ingredient with an expander control, the user can see the individual ingredients and change the quantity and expiration date.
 
 In the top the users can add ingredients using the auto-complete control described in \cref{sec:AutoComplete}, which finds available ingredients from the database. The list is initially sorted by name, but can also be sorted by quantity or expiration date.
 
 \section{Shopping List}
-The shopping list page shows a list of ingredients that needs to be bought for the recipes in the meal plan for the shop-ahead period mentioned in \cref{ss:settings}. It displays ingredients and the quantity that is missing from the inventory, according to the mealplan and stock management settings. Each ingredient has a check-box so the user can add the selected ingredients directly to the inventory after shopping.
+The shopping list page shows a list of ingredients that needs to be bought for the recipes in the meal plan within the shop-ahead period mentioned in \cref{ss:settings}. It displays ingredients and the quantity that is missing from the inventory, according to the meal plan and stock management settings. Each ingredient has a check-box so the user can add the selected ingredients directly to the inventory after shopping.
 
-\section{Mealplan}
-The meal-plan shows a week of scheduled meals, and allows the user to navigate to the previous and next week. The weekdays are listed as rows, with seven individual lists of meals belonging to the specific days. By clicking the meals the  user can navigate to the Recipe Page to see information about the recipe and/or update meal information.
+\section{Meal Plan}
+The meal plan shows a week of scheduled meals, and allows the user to navigate to the previous and next week. The weekdays are listed as rows, with seven individual lists of meals belonging to the specific days. By clicking the meals the  user can navigate to the Recipe Page to see information about the recipe and/or update meal information.
 
 \section{Search}
-The Search page lists recipes sorted by multiple factors, first the Search is sorted by percentage of how many of the ingredients in the recipe the user has in their inventory, then the application sorts by how many of the ingredients the user has partially in their inventory. Then the application sorts the search results by the rating the ingredients in the recipe, then by how many times the ingredients in the recipe has been used in the past. Lastly the search results is sorted by the name of the recipe.
-In the top it is possible to search for recipes by searching for the recipe name, or comma separated ingredients.
+The Search page lists recipes sorted by multiple factors, first the Search is sorted by percentage of how many of the ingredients in the recipe the user has in the inventory, then the application sorts the list by the number of ingredients the user has partially in their inventory. Then the application sorts the search results by the rating of the ingredients in the recipe, then by how many times the ingredients in the recipe has been used in the past. Lastly the search results are sorted by the name of the recipe.
+In the top it is possible to search for recipes by searching for the recipe name, or ingredients sorted by comma.
 
 \section{Recipe Page}
-The recipe page shows information about a recipe or meal. By clicking a recipe in the search, you navigate to the recipe page which displays the title, image and description of the recipe as well as a list of ingredients. In the top you can add the recipe to the mealplan, and if it is already added you can update the date, or remove it.
-By clicking a meal on the mealplan you are also taken to this page.
+The recipe page shows information about a recipe or meal. By clicking a recipe in the search, you navigate to the recipe page which displays the title, image and description of the recipe as well as a list of ingredients. In the top you can add the recipe to the meal plan, and if it is already added you can update the date, or remove the recipe from the meal plan.
+By clicking a meal on the meal plan the user is also taken to this page.
 

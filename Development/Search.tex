@@ -15,13 +15,13 @@ Since the program does not remove an ingredient if it gets too old the applicati
 \subsection{ingredientsFromLastMeals}
 This field gets all the users previous meals and get the ingredients from them. Then group the ingredients into the class LastMeal where the ingredientCount is the number of times the ingredient has been used previously.
 
-\subsection{blackList}
+\subsection{blackList} \label{ssc:blacklist}
 
 This field retrieves all the blacklisted ingredients from the specific user, and then finds all the recipes where at least one of the blacklisted ingredients is used.
 
 Then it selects the ids of the found recipes to the field. Duplicates is ignored because the outcome dies not change if a recipe is ignored multiple times.
 
-\subsection{grayList}
+\subsection{grayList}\label{ssc:graylist}
 This field retrieves all the graylisted ingredients. The graylist is essentially a rating system for ingredients where the higher the value the ingredient has, the higher priority a recipe with the ingredient has.
 
 When the grayList is used only the first of the specific grayList ingredient is used from the list, the list needs to be grouped by ingredient. But the value of the specific grayList ingredient cannot exceed the max value of 100, so if a duplicate ingredient occurs, which can happen if a diet is set, the grouping needs to handle it. 

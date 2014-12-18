@@ -12,7 +12,7 @@ The classes have been modelled in a MySQL database and imported into Visual Stud
 
 The \textbf{Ingredient} class describes a food item and which unit is used to measure it such as kg or ml.
 
-\textbf{RecipePreparition} is a class used exclusively to hold a string property \textit{Preparation} which is a text guide on how to prepare the recipe. The reason this is not just a string property in the Recipe class is to allow lazy-loading, this property from the database when it is needed, thereby allowing the program to list different recipes without having to download a lot of text data that is not displayed.
+\textbf{RecipePreparition} is a class used exclusively to hold a string property \textit{Preparation} which is a text guide on how to prepare the recipe. The reason this is not simply a string property in the Recipe class is to allow lazy-loading, this property from the database when it is needed, thereby allowing the program to list different recipes without having to download a lot of text data that is not displayed.
 
 \textbf{RecipeIngredient} is a class that wraps the Ingredient class to add the quantity property that keep track of how much a recipe needs of the specific ingredient. In the database it also serves a junction table that connects a Recipe with an Ingredient.
 
