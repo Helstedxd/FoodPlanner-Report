@@ -63,6 +63,6 @@ If the keywords are set, the application also tests the ingredient for a keyword
 The application checks if the specific ingredient has been used in previous meals.
 If it has, the application adds the number of times the ingredient has been used to the prevIngredients which is a property in the \textbf{SearchResults} object.
 
-Then the application checks if the ingredient is found in the graylist If it is, it use the rating, if not it sets the rating to 50 which is the default value.
+Then the application checks if the ingredient is found in the graylist If it is, it uses the rating but if it is not, it sets the rating to 50 which is the default value for the rating system mentioned in \cref{ss:settings}.
 
-After all this is done it adds the \textbf{SearchResults} object to a ObservableCollection which is returned.
+After all this is done the method adds the \textbf{SearchResults} object to an ObservableCollection which is then returned.
