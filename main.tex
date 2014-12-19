@@ -23,6 +23,7 @@
 \usepackage[footnote,draft,english,silent,nomargin]{fixme}
 \usepackage{enumerate}%Listing
 
+
 %%% Tag specific
 %\usepackage{tabularx} % Table
 \usepackage{booktabs} % Nice tabelsMost critical path with backtracing
@@ -48,6 +49,7 @@
 \usepackage[utf8]{inputenc} %%\usepackage[utf8x]{inputenc}
 \usepackage{amsfonts} % Math 
 \usepackage[font=scriptsize]{caption} %small caption text
+\usepackage{multicol}
 
 %%% Codeinput related
 \usepackage[ruled]{algorithm2e}
@@ -149,6 +151,20 @@
 \DeclareUnicodeCharacter{00A0}{~}
 
 \usepackage{cleveref}
+
+\newcommand{\signature}[1]{
+\begin{minipage}[c]{\textwidth}
+\vspace{2cm}
+
+\makebox[7cm][c]{
+\hfill \makebox[7cm] {\hrulefill}
+}
+
+\makebox[7cm][c]{
+ \hfil #1
+}
+\end{minipage}
+}
 
 \begin{document}
     \addtocontents{toc}{\protect\thispagestyle{empty}}
