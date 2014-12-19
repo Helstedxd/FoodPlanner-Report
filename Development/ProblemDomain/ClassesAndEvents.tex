@@ -2,7 +2,7 @@
 In this section a list of classes will be presented. The classes described are those which have been chosen through a class candidate analysis.
 
 \subsection{Class Definitions}
-
+The chosen classes from the class candidate analysis will be defined in this section.
 \subsubsection{Physical}
 \begin{itemize}
 \item \textbf{Food:} This class is used to identify different ingredients for the recipes with information such as food type, quantity and expiration date. This class is essential for the program and will be used frequently.
@@ -17,17 +17,17 @@ In this section a list of classes will be presented. The classes described are t
 
 \subsubsection{Places}
 \begin{itemize}
-\item \textbf{Shop:} This class holds information about the what groceries and discounts the shop has as well as the opening hours for the shop.
+\item \textbf{Shop:} This class holds information about what groceries and discounts the store has, as well as the opening hours for the store.
 \end{itemize}
 
 \subsection{Class Diagram}
 The class diagram is structured with \textit{Food} as the central class. 
-\textit{Shopping List}, \textit{Inventory} and \textit{Foodplan} are lists, containing \textit{Food} or \textit{Meal}.
+\textit{Shopping list}, \textit{Inventory} and \textit{Foodplan} are lists, containing \textit{Food} or \textit{Meal}.
+The \textit{Shop} class is not included in the class diagram, as it was not assessed to be useful in the further development.
 
-Food objects can be part of a \textit{Shopping List}, a user's \textit{Inventory}, or a \textit{Recipe}, seen as aggregation on \cref{fig:classDiagram}. A \textit{Recipe} contains one to many Food objects, and is part of a \textit{Meal} that in turn is part of a \textit{Foodplan}. A \textit{Meal} contains exactly one recipe, while the \textit{Foodplan} can have any number of planned \textit{Meals}.
+Food objects can be part of a \textit{Shopping list}, a user's \textit{Inventory} or a \textit{Recipe}, seen as aggregation on \cref{fig:classDiagram}. A \textit{Recipe} contains one to many Food objects, and is part of a \textit{Meal} that in turn is part of a \textit{Foodplan}. A \textit{Meal} contains exactly one recipe, while the \textit{Foodplan} can have zero to many planned \textit{Meal}.
 
-The \textit{User} class has a one to one relation with the Shopping list, Inventory and Food plan.
-\fxnote{skrif food shop ikke er med i klasse diagrammet}
+The \textit{User} class has a one to one relation with the \textit{Shopping list}, \textit{Inventory} and \textit{Foodplan}.
 \begin{figure}[H]
 	\centering
 	\includegraphics[clip=true, width=1\textwidth, trim=1cm 3cm 3cm 0]{Grafik/FoodPlanner/Klasseting}
@@ -39,7 +39,7 @@ The \textit{User} class has a one to one relation with the Shopping list, Invent
 In this section a list of events will be presented. The events described are those which have been chosen through an event candidate analysis. The events and what trigger them are listed below.
 
 \subsection{Event Definitions}
-
+The chosen events from the event candidate analysis will be defined in this section.
 \subsubsection{Consumption}
 \begin{itemize}
 \item \textbf{Product bought:} A shopping list have been completed. The items bought will be added to an inventory.
